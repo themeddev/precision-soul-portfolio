@@ -1,10 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-
-const TECHS = [
-  'React', 'Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'GraphQL', 
-  'AWS', 'Docker', 'Kubernetes', 'Redis', 'Tailwind', 'GSAP', 'Prisma'
-];
+import { techStack } from '../lib/data-loader';
 
 export const TechTicker: React.FC = () => {
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -28,7 +24,7 @@ export const TechTicker: React.FC = () => {
     <div className="w-full py-10 border-y border-white/5 bg-black/50 overflow-hidden relative z-20">
       <div className="relative w-full flex overflow-hidden">
          <div ref={wrapperRef} className="flex whitespace-nowrap gap-16 px-8">
-            {[...TECHS, ...TECHS, ...TECHS].map((tech, i) => (
+            {[...techStack, ...techStack, ...techStack].map((tech, i) => (
                 <div key={i} className="flex items-center gap-4 text-2xl md:text-4xl font-display font-bold text-white/20 uppercase">
                     <span>{tech}</span>
                     <span className="text-accent text-lg">★</span>

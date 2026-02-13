@@ -2,13 +2,18 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Button } from './ui/Button';
-import { ArrowRight, Globe, Code } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { profile, translations } from '../lib/data-loader';
+import { useLanguage } from '../contexts/LanguageContext';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Hero: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
+  const { language } = useLanguage();
+  const t = translations[language];
+  const heroText = profile.hero[language];
   
   useEffect(() => {
     const tl = gsap.timeline();
@@ -64,33 +69,32 @@ export const Hero: React.FC = () => {
              <div className="overflow-hidden">
                 <div className="hero-text-line flex items-center gap-4 text-accent/80 font-mono text-sm tracking-widest uppercase mb-4">
                   <span className="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
-                  Available for freelance
+                  {heroText.availability}
                 </div>
              </div>
              
              <h1 ref={titleRef} className="font-display font-bold text-5xl md:text-7xl lg:text-9xl tracking-tight leading-[1.1] md:leading-[1.1] text-white">
-                <div className="overflow-hidden"><span className="hero-text-line block">Building digital</span></div>
-                <div className="overflow-hidden"><span className="hero-text-line block">products with</span></div>
-                <div className="overflow-hidden"><span className="hero-text-line block text-transparent bg-clip-text bg-gradient-to-r from-accent to-white">precision & soul<span className="text-accent">.</span></span></div>
+                <div className="overflow-hidden"><span className="hero-text-line block">{heroText.line1}</span></div>
+                <div className="overflow-hidden"><span className="hero-text-line block">{heroText.line2}</span></div>
+                <div className="overflow-hidden"><span className="hero-text-line block text-transparent bg-clip-text bg-gradient-to-r from-accent to-white">{heroText.line3}<span className="text-accent">.</span></span></div>
              </h1>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
             <div className="md:col-span-6 lg:col-span-5">
                <p className="hero-sub text-lg md:text-xl text-muted leading-relaxed">
-                 A Full-Stack Developer specializing in high-performance web applications, 
-                 scalable APIs, and fluid user interfaces using Next.js, Node, and AWS.
+                 {profile.intro[language]}
                </p>
             </div>
             <div className="md:col-span-6 flex flex-wrap gap-4">
                 <div className="hero-btn">
                     <Button onClick={() => document.getElementById('projects')?.scrollIntoView({behavior:'smooth'})}>
-                        View Projects <ArrowRight className="w-4 h-4" />
+                        {t.hero.viewProjects} <ArrowRight className="w-4 h-4" />
                     </Button>
                 </div>
                 <div className="hero-btn">
                      <Button variant="outline" onClick={() => document.getElementById('contact')?.scrollIntoView({behavior:'smooth'})}>
-                        Book a Call
+                        {t.hero.bookCall}
                      </Button>
                 </div>
             </div>
@@ -101,7 +105,7 @@ export const Hero: React.FC = () => {
       
       {/* Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-bounce">
-         <span className="text-xs uppercase tracking-widest">Scroll</span>
+         <span className="text-xs uppercase tracking-widest">{t.hero.scroll}</span>
          <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
       </div>
     </section>

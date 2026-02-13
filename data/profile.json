@@ -1,0 +1,55 @@
+{
+  "name": "Alex Dev",
+  "title": "Full-Stack Developer",
+  "bio": {
+    "en": "With over 6 years of deep technical experience, I bridge the gap between complex backend architecture and intuitive frontend design. My philosophy is simple: clean code, scalable infrastructure, and a relentless focus on user experience. Whether it's a 0-to-1 startup MVP or an enterprise migration, I bring a product-first mindset.",
+    "fr": "Avec plus de 6 ans d'expérience technique approfondie, je fais le lien entre l'architecture backend complexe et la conception frontend intuitive. Ma philosophie est simple : code propre, infrastructure évolutive et un focus implacable sur l'expérience utilisateur. Qu'il s'agisse d'un MVP startup 0-to-1 ou d'une migration d'entreprise, j'apporte une mentalité axée sur le produit.",
+    "de": "Mit über 6 Jahren tiefgreifender technischer Erfahrung überbrücke ich die Lücke zwischen komplexer Backend-Architektur und intuitivem Frontend-Design. Meine Philosophie ist einfach: sauberer Code, skalierbare Infrastruktur und ein unerbittlicher Fokus auf Benutzerfreundlichkeit. Ob es sich um ein Startup-MVP von 0 bis 1 oder eine Unternehmensmigration handelt, ich bringe eine produktorientierte Denkweise mit."
+  },
+  "intro": {
+    "en": "A Full-Stack Developer specializing in high-performance web applications, scalable APIs, and fluid user interfaces using Next.js, Node, and AWS.",
+    "fr": "Un développeur Full-Stack spécialisé dans les applications web haute performance, les API évolutives et les interfaces utilisateur fluides utilisant Next.js, Node et AWS.",
+    "de": "Ein Full-Stack-Entwickler, der sich auf hochperformante Webanwendungen, skalierbare APIs und flüssige Benutzeroberflächen mit Next.js, Node und AWS spezialisiert."
+  },
+  "hero": {
+    "en": {
+      "line1": "Building digital",
+      "line2": "products with",
+      "line3": "precision & soul",
+      "availability": "Available for freelance"
+    },
+    "fr": {
+      "line1": "Création de produits",
+      "line2": "numériques avec",
+      "line3": "précision & âme",
+      "availability": "Disponible en freelance"
+    },
+    "de": {
+      "line1": "Digitale Produkte",
+      "line2": "bauen mit",
+      "line3": "Präzision & Seele",
+      "availability": "Verfügbar für Freelance"
+    }
+  },
+  "stats": {
+    "experience": "6+",
+    "experienceLabel": {
+      "en": "Years Experience",
+      "fr": "Années d'expérience",
+      "de": "Jahre Erfahrung"
+    },
+    "projects": "40+",
+    "projectsLabel": {
+      "en": "Projects Delivered",
+      "fr": "Projets livrés",
+      "de": "Gelieferte Projekte"
+    }
+  },
+  "location": {
+    "en": "San Francisco, CA (Remote Open)",
+    "fr": "San Francisco, CA (Télétravail ouvert)",
+    "de": "San Francisco, CA (Remote möglich)"
+  },
+  "email": "hello@alexdev.com",
+  "cvUrl": "/cv/alex-dev-cv.pdf"
+}

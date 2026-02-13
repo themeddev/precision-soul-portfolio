@@ -1,0 +1,158 @@
+{
+  "en": {
+    "nav": {
+      "projects": "Projects",
+      "about": "About",
+      "stack": "Stack",
+      "contact": "Contact",
+      "letsTalk": "Let's Talk"
+    },
+    "hero": {
+      "viewProjects": "View Projects",
+      "bookCall": "Book a Call",
+      "scroll": "Scroll"
+    },
+    "projects": {
+      "selectedWorks": "Selected Works",
+      "featuredProjects": "Featured Projects",
+      "scrollToExplore": "Scroll to explore →",
+      "viewLive": "View Live",
+      "wantToSeeMore": "Want to see more?",
+      "viewGitHubProfile": "View GitHub Profile"
+    },
+    "about": {
+      "aboutMe": "About Me",
+      "title": "I don't just write code.\nI engineer business outcomes.",
+      "experience": "Experience"
+    },
+    "skills": {
+      "techStack": "Tech Stack",
+      "toolsOfTheTrade": "Tools of the Trade"
+    },
+    "services": {
+      "services": "Services",
+      "howICanHelp": "How I can help",
+      "description": "Comprehensive technical solutions for scaling businesses. From architecture to deployment.",
+      "process": "Process"
+    },
+    "contact": {
+      "title": "Let's build something legendary.",
+      "sendMessage": "Send a message",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message",
+      "namePlaceholder": "John Doe",
+      "emailPlaceholder": "john@example.com",
+      "messagePlaceholder": "Tell me about your project...",
+      "copyright": "All Rights Reserved."
+    },
+    "footer": {
+      "copyright": "All Rights Reserved."
+    }
+  },
+  "fr": {
+    "nav": {
+      "projects": "Projets",
+      "about": "À propos",
+      "stack": "Stack",
+      "contact": "Contact",
+      "letsTalk": "Parlons-en"
+    },
+    "hero": {
+      "viewProjects": "Voir les projets",
+      "bookCall": "Réserver un appel",
+      "scroll": "Défiler"
+    },
+    "projects": {
+      "selectedWorks": "Travaux sélectionnés",
+      "featuredProjects": "Projets en vedette",
+      "scrollToExplore": "Défiler pour explorer →",
+      "viewLive": "Voir en direct",
+      "wantToSeeMore": "Vous voulez en voir plus ?",
+      "viewGitHubProfile": "Voir le profil GitHub"
+    },
+    "about": {
+      "aboutMe": "À propos de moi",
+      "title": "Je ne fais pas que coder.\nJe conçois des résultats commerciaux.",
+      "experience": "Expérience"
+    },
+    "skills": {
+      "techStack": "Stack technique",
+      "toolsOfTheTrade": "Outils du métier"
+    },
+    "services": {
+      "services": "Services",
+      "howICanHelp": "Comment je peux aider",
+      "description": "Solutions techniques complètes pour les entreprises en croissance. De l'architecture au déploiement.",
+      "process": "Processus"
+    },
+    "contact": {
+      "title": "Créons quelque chose de légendaire.",
+      "sendMessage": "Envoyer un message",
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "send": "Envoyer le message",
+      "namePlaceholder": "Jean Dupont",
+      "emailPlaceholder": "jean@exemple.com",
+      "messagePlaceholder": "Parlez-moi de votre projet...",
+      "copyright": "Tous droits réservés."
+    },
+    "footer": {
+      "copyright": "Tous droits réservés."
+    }
+  },
+  "de": {
+    "nav": {
+      "projects": "Projekte",
+      "about": "Über mich",
+      "stack": "Stack",
+      "contact": "Kontakt",
+      "letsTalk": "Lass uns reden"
+    },
+    "hero": {
+      "viewProjects": "Projekte ansehen",
+      "bookCall": "Anruf buchen",
+      "scroll": "Scrollen"
+    },
+    "projects": {
+      "selectedWorks": "Ausgewählte Arbeiten",
+      "featuredProjects": "Ausgewählte Projekte",
+      "scrollToExplore": "Scrollen zum Erkunden →",
+      "viewLive": "Live ansehen",
+      "wantToSeeMore": "Möchten Sie mehr sehen?",
+      "viewGitHubProfile": "GitHub-Profil ansehen"
+    },
+    "about": {
+      "aboutMe": "Über mich",
+      "title": "Ich schreibe nicht nur Code.\nIch entwickle Geschäftsergebnisse.",
+      "experience": "Erfahrung"
+    },
+    "skills": {
+      "techStack": "Tech-Stack",
+      "toolsOfTheTrade": "Werkzeuge des Handwerks"
+    },
+    "services": {
+      "services": "Dienstleistungen",
+      "howICanHelp": "Wie ich helfen kann",
+      "description": "Umfassende technische Lösungen für wachsende Unternehmen. Von der Architektur bis zur Bereitstellung.",
+      "process": "Prozess"
+    },
+    "contact": {
+      "title": "Lass uns etwas Legendäres bauen.",
+      "sendMessage": "Nachricht senden",
+      "name": "Name",
+      "email": "E-Mail",
+      "message": "Nachricht",
+      "send": "Nachricht senden",
+      "namePlaceholder": "Max Mustermann",
+      "emailPlaceholder": "max@beispiel.de",
+      "messagePlaceholder": "Erzählen Sie mir von Ihrem Projekt...",
+      "copyright": "Alle Rechte vorbehalten."
+    },
+    "footer": {
+      "copyright": "Alle Rechte vorbehalten."
+    }
+  }
+}

@@ -12,6 +12,9 @@ import { Skills } from './components/Skills';
 import { Services } from './components/Services';
 import { Contact } from './components/Contact';
 import { CustomCursor } from './components/CustomCursor';
+import { Sidebar } from './components/Sidebar';
+import { ThemeProvider } from './contexts/ThemeContext';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 // Register GSAP plugins globally
 gsap.registerPlugin(ScrollTrigger);
@@ -44,26 +47,33 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-background text-text min-h-screen relative selection:bg-accent selection:text-white">
-      {/* Global Noise Overlay */}
-      <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.03] bg-noise mix-blend-overlay"></div>
-      
-      {/* Custom Cursor */}
-      <CustomCursor />
+    <ThemeProvider>
+      <LanguageProvider>
+        <div className="bg-background text-text min-h-screen relative selection:bg-accent selection:text-white">
+          {/* Global Noise Overlay */}
+          <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.03] bg-noise mix-blend-overlay"></div>
+          
+          {/* Custom Cursor */}
+          <CustomCursor />
 
-      {/* Navigation */}
-      <Navigation />
+          {/* Navigation */}
+          <Navigation />
 
-      <main className="relative z-10">
-        <Hero />
-        <TechTicker />
-        <Projects />
-        <About />
-        <Skills />
-        <Services />
-        <Contact />
-      </main>
-    </div>
+          {/* Sidebar */}
+          <Sidebar />
+
+          <main className="relative z-10">
+            <Hero />
+            <TechTicker />
+            <Projects />
+            <About />
+            <Skills />
+            <Services />
+            <Contact />
+          </main>
+        </div>
+      </LanguageProvider>
+    </ThemeProvider>
   );
 };
 

@@ -1,0 +1,44 @@
+[
+  {
+    "year": "2023 - Present",
+    "role": {
+      "en": "Senior Full-Stack Engineer",
+      "fr": "Ingénieur Full-Stack Senior",
+      "de": "Senior Full-Stack Ingenieur"
+    },
+    "company": "TechFlow Agency",
+    "description": {
+      "en": "Leading a team of 5 developers building enterprise SaaS solutions.",
+      "fr": "Diriger une équipe de 5 développeurs construisant des solutions SaaS d'entreprise.",
+      "de": "Leitung eines Teams von 5 Entwicklern, die Enterprise-SaaS-Lösungen entwickeln."
+    }
+  },
+  {
+    "year": "2021 - 2023",
+    "role": {
+      "en": "Full-Stack Developer",
+      "fr": "Développeur Full-Stack",
+      "de": "Full-Stack-Entwickler"
+    },
+    "company": "StartUp Inc.",
+    "description": {
+      "en": "Built the MVP and scaled the product to the first 50k users.",
+      "fr": "Construit le MVP et fait évoluer le produit jusqu'aux premiers 50k utilisateurs.",
+      "de": "Erstellung des MVP und Skalierung des Produkts auf die ersten 50k Nutzer."
+    }
+  },
+  {
+    "year": "2019 - 2021",
+    "role": {
+      "en": "Frontend Developer",
+      "fr": "Développeur Frontend",
+      "de": "Frontend-Entwickler"
+    },
+    "company": "Creative Digital",
+    "description": {
+      "en": "Crafted award-winning marketing sites and interactive experiences.",
+      "fr": "Créé des sites marketing primés et des expériences interactives.",
+      "de": "Erstellung preisgekrönter Marketing-Websites und interaktiver Erlebnisse."
+    }
+  }
+]

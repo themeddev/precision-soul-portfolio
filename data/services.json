@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "title": {
+      "en": "Full-Stack Web Apps",
+      "fr": "Applications Web Full-Stack",
+      "de": "Full-Stack Web-Apps"
+    },
+    "description": {
+      "en": "End-to-end development of scalable, performant web applications using modern architectures.",
+      "fr": "Développement de bout en bout d'applications web évolutives et performantes utilisant des architectures modernes.",
+      "de": "End-to-End-Entwicklung skalierbarer, leistungsstarker Webanwendungen mit modernen Architekturen."
+    },
+    "icon": "Layers",
+    "steps": {
+      "en": ["Architecture", "Development", "Testing", "Deployment"],
+      "fr": ["Architecture", "Développement", "Tests", "Déploiement"],
+      "de": ["Architektur", "Entwicklung", "Tests", "Bereitstellung"]
+    }
+  },
+  {
+    "id": 2,
+    "title": {
+      "en": "API & Systems Design",
+      "fr": "Conception d'API et de systèmes",
+      "de": "API- und Systemdesign"
+    },
+    "description": {
+      "en": "Robust backend systems designed for high availability, security, and low latency.",
+      "fr": "Systèmes backend robustes conçus pour une haute disponibilité, la sécurité et une faible latence.",
+      "de": "Robuste Backend-Systeme, die für hohe Verfügbarkeit, Sicherheit und niedrige Latenz entwickelt wurden."
+    },
+    "icon": "Database",
+    "steps": {
+      "en": ["Schema Design", "API Dev", "Optimization", "Documentation"],
+      "fr": ["Conception de schéma", "Développement API", "Optimisation", "Documentation"],
+      "de": ["Schema-Design", "API-Entwicklung", "Optimierung", "Dokumentation"]
+    }
+  },
+  {
+    "id": 3,
+    "title": {
+      "en": "Performance Tuning",
+      "fr": "Optimisation des performances",
+      "de": "Leistungsoptimierung"
+    },
+    "description": {
+      "en": "Optimizing existing applications for Core Web Vitals, load times, and server efficiency.",
+      "fr": "Optimisation des applications existantes pour les Core Web Vitals, les temps de chargement et l'efficacité du serveur.",
+      "de": "Optimierung bestehender Anwendungen für Core Web Vitals, Ladezeiten und Servereffizienz."
+    },
+    "icon": "Zap",
+    "steps": {
+      "en": ["Audit", "Refactoring", "Caching", "Monitoring"],
+      "fr": ["Audit", "Refactorisation", "Mise en cache", "Surveillance"],
+      "de": ["Audit", "Refactoring", "Caching", "Überwachung"]
+    }
+  }
+]

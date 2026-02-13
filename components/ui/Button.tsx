@@ -6,13 +6,17 @@ interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'outline';
   onClick?: () => void;
   className?: string;
+  type?: 'button' | 'submit' | 'reset';
+  disabled?: boolean;
 }
 
 export const Button: React.FC<ButtonProps> = ({ 
   children, 
   variant = 'primary', 
   onClick, 
-  className = '' 
+  className = '',
+  type = 'button',
+  disabled = false
 }) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const textRef = useRef<HTMLSpanElement>(null);
@@ -73,7 +77,9 @@ export const Button: React.FC<ButtonProps> = ({
     <button
       ref={buttonRef}
       onClick={onClick}
-      className={`${baseStyles} ${variants[variant]} ${className}`}
+      type={type}
+      disabled={disabled}
+      className={`${baseStyles} ${variants[variant]} ${className} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
     >
       <span ref={textRef} className="relative z-10 flex items-center justify-center gap-2">
         {children}
