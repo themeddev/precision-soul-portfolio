@@ -22,34 +22,54 @@ gsap.registerPlugin(ScrollTrigger);
 const App: React.FC = () => {
 
   useEffect(() => {
-    // Smooth Scroll Setup (Lenis)
+    // Optimized Smooth Scroll Setup (Lenis)
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 1.5,
+      infinite: false,
     });
 
-    // Sync Lenis with GSAP ScrollTrigger
-    lenis.on('scroll', ScrollTrigger.update);
+    // Store lenis instance globally for smoothScrollTo utility
+    (window as any).lenis = lenis;
 
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
+    // Sync Lenis with GSAP ScrollTrigger (throttled)
+    let rafId: number;
+    const updateScrollTrigger = () => {
+      ScrollTrigger.update();
+      rafId = requestAnimationFrame(updateScrollTrigger);
+    };
+
+    lenis.on('scroll', () => {
+      if (!rafId) {
+        rafId = requestAnimationFrame(updateScrollTrigger);
+      }
     });
 
-    gsap.ticker.lagSmoothing(0);
+    // Optimized animation frame loop
+    function raf(time: number) {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    }
 
+    rafId = requestAnimationFrame(raf);
+
+    // Cleanup
     return () => {
+      cancelAnimationFrame(rafId);
       lenis.destroy();
-      gsap.ticker.remove(lenis.raf);
+      delete (window as any).lenis;
     };
   }, []);
 
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <div className="bg-background text-text min-h-screen relative selection:bg-accent selection:text-white">
+        <div className="min-h-screen relative selection:bg-accent selection:text-white" style={{ backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)' }}>
           {/* Global Noise Overlay */}
           <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.03] bg-noise mix-blend-overlay"></div>
           

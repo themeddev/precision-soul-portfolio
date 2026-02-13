@@ -11,27 +11,12 @@
         theme: {
           extend: {
             colors: {
-              background: {
-                DEFAULT: '#050505',
-                light: '#fafafa',
-              },
-              surface: {
-                DEFAULT: '#0f0f0f',
-                light: '#ffffff',
-              },
-              surfaceHighlight: {
-                DEFAULT: '#1a1a1a',
-                light: '#f5f5f5',
-              },
-              text: {
-                DEFAULT: '#ededed',
-                light: '#1a1a1a',
-              },
-              muted: {
-                DEFAULT: '#888888',
-                light: '#666666',
-              },
-              accent: '#ff4d00', // International Orange
+              background: 'var(--bg-primary)',
+              surface: 'var(--bg-surface)',
+              surfaceHighlight: 'var(--bg-surface-highlight)',
+              text: 'var(--text-primary)',
+              muted: 'var(--text-muted)',
+              accent: '#ff4d00',
               accentGlow: 'rgba(255, 77, 0, 0.3)',
             },
             fontFamily: {
@@ -40,16 +25,56 @@
             },
             backgroundImage: {
               'noise': "url('https://grainy-gradients.vercel.app/noise.svg')",
-            }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-in-out',
+              'slide-in-from-top': 'slideInFromTop 0.3s ease-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideInFromTop: {
+                '0%': { transform: 'translateY(-10px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+            },
           },
         },
       }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <style>
-      body {
-        cursor: none; /* Hide default cursor for custom one */
+      :root {
+        --bg-primary: #050505;
+        --bg-surface: #0f0f0f;
+        --bg-surface-highlight: #1a1a1a;
+        --text-primary: #ededed;
+        --text-muted: #888888;
+        --accent: #ff4d00;
+        --accent-glow: rgba(255, 77, 0, 0.3);
       }
+
+      .light {
+        --bg-primary: #fafafa;
+        --bg-surface: #ffffff;
+        --bg-surface-highlight: #f5f5f5;
+        --text-primary: #1a1a1a;
+        --text-muted: #666666;
+      }
+
+      * {
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      }
+
+      body {
+        cursor: none;
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
       /* Fallback for mobile or if JS fails */
       @media (pointer: coarse) {
         body {
@@ -69,6 +94,42 @@
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
+      }
+
+      /* Smooth scroll behavior */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* 3D Transform utilities */
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+
+      .preserve-3d {
+        transform-style: preserve-3d;
+      }
+
+      /* Performance optimizations */
+      .hero-bg-blob,
+      .hero-text-line,
+      .hero-btn {
+        will-change: transform;
+      }
+
+      /* Reduce blur effects on low-end devices */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+      /* Optimize rendering */
+      .hero-bg-blob {
+        transform: translateZ(0);
+        backface-visibility: hidden;
       }
     </style>
   <script type="importmap">

@@ -20,11 +20,14 @@ export const Projects: React.FC = () => {
     
     if (!container || !wrapper) return;
 
-    // Need to handle resizing to recalculate width
+    // Optimized scroll calculation
     const getScrollAmount = () => {
-        let wrapperWidth = wrapper.scrollWidth;
+        const wrapperWidth = wrapper.scrollWidth;
         return -(wrapperWidth - window.innerWidth);
     };
+
+    // Use will-change for better performance
+    wrapper.style.willChange = 'transform';
 
     const tween = gsap.to(wrapper, {
       x: getScrollAmount,
@@ -34,13 +37,24 @@ export const Projects: React.FC = () => {
         start: "top top",
         end: () => `+=${getScrollAmount() * -1}`,
         pin: true,
-        scrub: 1,
+        scrub: true,
         invalidateOnRefresh: true,
+        anticipatePin: 1,
       }
     });
 
+    // Handle resize efficiently
+    const handleResize = () => {
+      ScrollTrigger.refresh();
+    };
+    
+    const resizeObserver = new ResizeObserver(handleResize);
+    resizeObserver.observe(wrapper);
+
     return () => {
         tween.kill();
+        resizeObserver.disconnect();
+        wrapper.style.willChange = 'auto';
     };
   }, []);
 
