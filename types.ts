@@ -1,13 +1,16 @@
-export type Language = 'en' | 'fr' | 'de';
-export type Theme = 'light' | 'dark' | 'system';
+export type Language = "en" | "fr" | "de";
+export type Theme = "light" | "dark" | "system";
 
 export interface Project {
   id: number;
   title: string;
-  description: Record<Language, string>;
-  role: Record<Language, string>;
+  // description: Record<Language, string>;
+  description: string;
+  // role: Record<Language, string>;
+  role: string;
   tags: string[];
-  metrics: Record<Language, string>;
+  // metrics: Record<Language, string>;
+  metrics: string;
   image: string;
   link: string;
   github: string;
@@ -15,42 +18,42 @@ export interface Project {
 
 export interface Service {
   id: number;
-  title: Record<Language, string>;
-  description: Record<Language, string>;
+  title: Record<string, string>;
+  description: Record<string, string>;
   icon: string;
-  steps: Record<Language, string[]>;
+  steps: Record<string, string[]>;
 }
 
 export interface SkillCategory {
-  category: Record<Language, string>;
+  category: string;
   skills: { name: string; level: number }[];
 }
 
 export interface TimelineItem {
   year: string;
-  role: Record<Language, string>;
+  role: string;
   company: string;
-  description: Record<Language, string>;
+  description: string;
 }
 
 export interface Profile {
   name: string;
   title: string;
-  bio: Record<Language, string>;
-  intro: Record<Language, string>;
-  hero: Record<Language, {
+  bio: string;
+  intro: string;
+  hero: {
     line1: string;
     line2: string;
     line3: string;
     availability: string;
-  }>;
+  };
   stats: {
     experience: string;
-    experienceLabel: Record<Language, string>;
+    experienceLabel: string;
     projects: string;
-    projectsLabel: Record<Language, string>;
+    projectsLabel: string;
   };
-  location: Record<Language, string>;
+  location: string;
   email: string;
   cvUrl: string;
 }

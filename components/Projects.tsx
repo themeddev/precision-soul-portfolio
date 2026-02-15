@@ -20,40 +20,36 @@ export const Projects: React.FC = () => {
     
     if (!container || !wrapper) return;
 
-    // Optimized scroll calculation
+    // Optimized scroll calculation data
     const getScrollAmount = () => {
+        if (!wrapper) return 0;
         const wrapperWidth = wrapper.scrollWidth;
-        return -(wrapperWidth - window.innerWidth);
+        const containerWidth = container.offsetWidth; // Use offsetWidth for accuracy
+        return -(wrapperWidth - containerWidth);
     };
 
     // Use will-change for better performance
     wrapper.style.willChange = 'transform';
 
     const tween = gsap.to(wrapper, {
-      x: getScrollAmount,
+      x: getScrollAmount, // Function reference ensures dynamic recalculation
       ease: "none",
       scrollTrigger: {
         trigger: container,
         start: "top top",
-        end: () => `+=${getScrollAmount() * -1}`,
+        end: () => `+=${Math.abs(getScrollAmount())}`, // Dynamically calculate end based on scroll amount
         pin: true,
-        scrub: true,
-        invalidateOnRefresh: true,
+        scrub: 1, // Add slight smoothing to scrub for better feel
+        invalidateOnRefresh: true, // Recalculate on resize automatically
         anticipatePin: 1,
       }
     });
 
-    // Handle resize efficiently
-    const handleResize = () => {
-      ScrollTrigger.refresh();
-    };
-    
-    const resizeObserver = new ResizeObserver(handleResize);
-    resizeObserver.observe(wrapper);
-
     return () => {
-        tween.kill();
-        resizeObserver.disconnect();
+        // GSAP automatically handles resize, so no manual ResizeObserver needed
+        tween.kill(); // This kills the ScrollTrigger too since it's attached to the tween
+        // Explicitly kill ScrollTrigger if it exists (safety net)
+        if (tween.scrollTrigger) tween.scrollTrigger.kill();
         wrapper.style.willChange = 'auto';
     };
   }, []);

@@ -26,20 +26,24 @@ export const Navigation: React.FC = () => {
   useEffect(() => {
     // Smooth nav entrance with better animation
     const navItems = navRef.current?.querySelectorAll('.nav-item');
-    if (navItems) {
-      gsap.fromTo(navItems, 
-        { y: -30, opacity: 0, scale: 0.9 },
-        { 
-          y: 0, 
-          opacity: 1, 
-          scale: 1,
-          stagger: 0.08, 
-          duration: 0.8, 
-          ease: 'power3.out',
-          delay: 0.5
+    const ctx = gsap.context(() => {
+        if (navItems) {
+        gsap.fromTo(navItems, 
+            { y: -30, opacity: 0, scale: 0.9 },
+            { 
+            y: 0, 
+            opacity: 1, 
+            scale: 1,
+            stagger: 0.08, 
+            duration: 0.8, 
+            ease: 'power3.out',
+            delay: 0.5
+            }
+        );
         }
-      );
-    }
+    }, navRef);
+    
+    return () => ctx.revert();
 
     // Smooth scroll for navigation links (optimized)
     const handleNavClick = (e: MouseEvent) => {

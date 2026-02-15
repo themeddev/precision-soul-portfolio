@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="antialiased text-slate-200 bg-[#0a0a0a]">
   <head>
     <meta charset="UTF-8" />
@@ -7,44 +7,47 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
-        darkMode: 'class',
+        darkMode: "class",
         theme: {
           extend: {
             colors: {
-              background: 'var(--bg-primary)',
-              surface: 'var(--bg-surface)',
-              surfaceHighlight: 'var(--bg-surface-highlight)',
-              text: 'var(--text-primary)',
-              muted: 'var(--text-muted)',
-              accent: '#ff4d00',
-              accentGlow: 'rgba(255, 77, 0, 0.3)',
+              background: "var(--bg-primary)",
+              surface: "var(--bg-surface)",
+              surfaceHighlight: "var(--bg-surface-highlight)",
+              text: "var(--text-primary)",
+              muted: "var(--text-muted)",
+              accent: "#ff4d00",
+              accentGlow: "rgba(255, 77, 0, 0.3)",
             },
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              display: ['Space Grotesk', 'sans-serif'],
+              sans: ["Inter", "sans-serif"],
+              display: ["Space Grotesk", "sans-serif"],
             },
             backgroundImage: {
-              'noise': "url('https://grainy-gradients.vercel.app/noise.svg')",
+              noise: "url('https://grainy-gradients.vercel.app/noise.svg')",
             },
             animation: {
-              'fade-in': 'fadeIn 0.5s ease-in-out',
-              'slide-in-from-top': 'slideInFromTop 0.3s ease-out',
+              "fade-in": "fadeIn 0.5s ease-in-out",
+              "slide-in-from-top": "slideInFromTop 0.3s ease-out",
             },
             keyframes: {
               fadeIn: {
-                '0%': { opacity: '0' },
-                '100%': { opacity: '1' },
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
               },
               slideInFromTop: {
-                '0%': { transform: 'translateY(-10px)', opacity: '0' },
-                '100%': { transform: 'translateY(0)', opacity: '1' },
+                "0%": { transform: "translateY(-10px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
               },
             },
           },
         },
-      }
+      };
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
       :root {
         --bg-primary: #050505;
@@ -65,31 +68,36 @@
       }
 
       * {
-        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease,
+          border-color 0.3s ease;
       }
 
       body {
         cursor: none;
         background-color: var(--bg-primary);
         color: var(--text-primary);
-        transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        transition:
+          background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+          color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
       }
-      
+
       /* Fallback for mobile or if JS fails */
       @media (pointer: coarse) {
         body {
           cursor: auto;
         }
       }
-      
+
       .scrollbar-hide::-webkit-scrollbar {
-          display: none;
+        display: none;
       }
       .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
       }
-      
+
       .clip-text-image {
         background-clip: text;
         -webkit-background-clip: text;
@@ -97,9 +105,8 @@
       }
 
       /* Smooth scroll behavior */
-      html {
-        scroll-behavior: smooth;
-      }
+      /* Smooth scroll behavior is handled by Lenis */
+      /* html { scroll-behavior: smooth; } - Disabled to prevent conflict with Lenis */
 
       /* 3D Transform utilities */
       .perspective-1000 {
@@ -132,23 +139,23 @@
         backface-visibility: hidden;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "gsap": "https://esm.sh/gsap@^3.14.2",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
-    "gsap/": "https://esm.sh/gsap@^3.14.2/",
-    "@studio-freight/lenis": "https://esm.sh/@studio-freight/lenis@^1.0.42"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@^19.2.4",
+          "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+          "react/": "https://esm.sh/react@^19.2.4/",
+          "gsap": "https://esm.sh/gsap@^3.14.2",
+          "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+          "gsap/": "https://esm.sh/gsap@^3.14.2/",
+          "@studio-freight/lenis": "https://esm.sh/@studio-freight/lenis@^1.0.42"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
   <body>
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>

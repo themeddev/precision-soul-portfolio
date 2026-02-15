@@ -37,32 +37,30 @@ const App: React.FC = () => {
     // Store lenis instance globally for smoothScrollTo utility
     (window as any).lenis = lenis;
 
-    // Sync Lenis with GSAP ScrollTrigger (throttled)
-    let rafId: number;
-    const updateScrollTrigger = () => {
-      ScrollTrigger.update();
-      rafId = requestAnimationFrame(updateScrollTrigger);
+    // Sync Lenis with GSAP ScrollTrigger
+    lenis.on('scroll', ScrollTrigger.update);
+
+    // Use GSAP's ticker for the animation loop to ensure perfect sync
+    const update = (time: number) => {
+      lenis.raf(time * 1000);
     };
+    
+    gsap.ticker.add(update);
 
-    lenis.on('scroll', () => {
-      if (!rafId) {
-        rafId = requestAnimationFrame(updateScrollTrigger);
-      }
-    });
+    // Disable lag smoothing to prevent jumps during heavy load/scroll
+    gsap.ticker.lagSmoothing(0);
 
-    // Optimized animation frame loop
-    function raf(time: number) {
-      lenis.raf(time);
-      rafId = requestAnimationFrame(raf);
-    }
-
-    rafId = requestAnimationFrame(raf);
+    // Force a refresh after a short delay to ensure layout is ready (handles font loading etc)
+    const timeout = setTimeout(() => {
+        ScrollTrigger.refresh();
+    }, 500);
 
     // Cleanup
     return () => {
-      cancelAnimationFrame(rafId);
+      gsap.ticker.remove(update);
       lenis.destroy();
       delete (window as any).lenis;
+      clearTimeout(timeout);
     };
   }, []);
 
