@@ -19,6 +19,10 @@ export const Services: React.FC = () => {
                 scrollTrigger: { trigger: '#services', start: 'top 75%' }
             }
         );
+
+        return () => {
+            ScrollTrigger.getAll().forEach(t => t.kill());
+        };
     }, []);
 
   return (

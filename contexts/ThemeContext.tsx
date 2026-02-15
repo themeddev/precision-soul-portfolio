@@ -11,64 +11,66 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setThemeState] = useState<Theme>(() => {
-    const stored = localStorage.getItem('theme') as Theme;
-    return stored || 'system';
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('theme') as Theme;
+      return stored || 'system';
+    }
+    return 'system';
   });
 
   const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>('dark');
 
   useEffect(() => {
     const getSystemTheme = (): 'light' | 'dark' => {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-        return 'light';
+      if (typeof window !== 'undefined' && window.matchMedia) {
+        return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
       }
       return 'dark';
     };
 
-    const resolveTheme = (): 'light' | 'dark' => {
-      if (theme === 'system') {
-        return getSystemTheme();
-      }
-      return theme;
+    const applyTheme = (themeToApply: 'light' | 'dark') => {
+      const root = document.documentElement;
+      root.classList.remove('light', 'dark');
+      root.classList.add(themeToApply);
+      setResolvedTheme(themeToApply);
     };
 
-    const currentTheme = resolveTheme();
-    setResolvedTheme(currentTheme);
+    const resolveAndApplyTheme = () => {
+      const currentTheme = theme === 'system' ? getSystemTheme() : theme;
+      applyTheme(currentTheme);
+    };
 
-    // Apply theme to document
-    const root = document.documentElement;
-    if (currentTheme === 'light') {
-      root.classList.remove('dark');
-      root.classList.add('light');
-    } else {
-      root.classList.remove('light');
-      root.classList.add('dark');
-    }
+    // Initial theme application
+    resolveAndApplyTheme();
 
-    // Listen for system theme changes
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: light)');
-    const handleChange = () => {
-      if (theme === 'system') {
-        const newTheme = getSystemTheme();
-        setResolvedTheme(newTheme);
-        const root = document.documentElement;
-        if (newTheme === 'light') {
-          root.classList.remove('dark');
-          root.classList.add('light');
-        } else {
-          root.classList.remove('light');
-          root.classList.add('dark');
+    // Listen for system theme changes when in system mode
+    if (theme === 'system' && typeof window !== 'undefined') {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: light)');
+      const handleChange = () => {
+        if (theme === 'system') {
+          const newTheme = getSystemTheme();
+          applyTheme(newTheme);
         }
-      }
-    };
+      };
 
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
+      // Modern browsers
+      if (mediaQuery.addEventListener) {
+        mediaQuery.addEventListener('change', handleChange);
+        return () => mediaQuery.removeEventListener('change', handleChange);
+      } 
+      // Fallback for older browsers
+      else if (mediaQuery.addListener) {
+        mediaQuery.addListener(handleChange);
+        return () => mediaQuery.removeListener(handleChange);
+      }
+    }
   }, [theme]);
 
   const setTheme = (newTheme: Theme) => {
     setThemeState(newTheme);
-    localStorage.setItem('theme', newTheme);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('theme', newTheme);
+    }
   };
 
   return (

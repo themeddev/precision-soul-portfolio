@@ -1,4 +1,5 @@
 import React from 'react';
+import gsap from 'gsap';
 import { skills, translations } from '../lib/data-loader';
 import { CheckCircle2 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -36,12 +37,16 @@ export const Skills: React.FC = () => {
                                     style={{ width: `${skill.level}%`, transform: 'translateX(-100%)' }}
                                     ref={(el) => {
                                         if (!el) return;
-                                        const observer = new IntersectionObserver((entries) => {
-                                            if (entries[0].isIntersecting) {
-                                                el.style.transform = 'translateX(0)';
+                                        gsap.to(el, {
+                                            x: '0%',
+                                            duration: 1,
+                                            ease: 'power3.out',
+                                            scrollTrigger: {
+                                                trigger: el,
+                                                start: 'top 85%',
+                                                toggleActions: 'play none none reverse'
                                             }
                                         });
-                                        observer.observe(el);
                                     }}
                                  />
                              </div>

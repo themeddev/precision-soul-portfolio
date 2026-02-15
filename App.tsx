@@ -22,34 +22,52 @@ gsap.registerPlugin(ScrollTrigger);
 const App: React.FC = () => {
 
   useEffect(() => {
-    // Smooth Scroll Setup (Lenis)
+    // Optimized Smooth Scroll Setup (Lenis)
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 1.5,
+      infinite: false,
     });
+
+    // Store lenis instance globally for smoothScrollTo utility
+    (window as any).lenis = lenis;
 
     // Sync Lenis with GSAP ScrollTrigger
     lenis.on('scroll', ScrollTrigger.update);
 
-    gsap.ticker.add((time) => {
+    // Use GSAP's ticker for the animation loop to ensure perfect sync
+    const update = (time: number) => {
       lenis.raf(time * 1000);
-    });
+    };
+    
+    gsap.ticker.add(update);
 
+    // Disable lag smoothing to prevent jumps during heavy load/scroll
     gsap.ticker.lagSmoothing(0);
 
+    // Force a refresh after a short delay to ensure layout is ready (handles font loading etc)
+    const timeout = setTimeout(() => {
+        ScrollTrigger.refresh();
+    }, 500);
+
+    // Cleanup
     return () => {
+      gsap.ticker.remove(update);
       lenis.destroy();
-      gsap.ticker.remove(lenis.raf);
+      delete (window as any).lenis;
+      clearTimeout(timeout);
     };
   }, []);
 
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <div className="bg-background text-text min-h-screen relative selection:bg-accent selection:text-white">
+        <div className="min-h-screen relative selection:bg-accent selection:text-white" style={{ backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)' }}>
           {/* Global Noise Overlay */}
           <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.03] bg-noise mix-blend-overlay"></div>
           
