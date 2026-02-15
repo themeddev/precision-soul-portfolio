@@ -1,44 +1,44 @@
 [
   {
-    "year": "2023 - Present",
+    "year": "Oct 2024 - Present",
     "role": {
-      "en": "Senior Full-Stack Engineer",
-      "fr": "Ingénieur Full-Stack Senior",
-      "de": "Senior Full-Stack Ingenieur"
-    },
-    "company": "TechFlow Agency",
-    "description": {
-      "en": "Leading a team of 5 developers building enterprise SaaS solutions.",
-      "fr": "Diriger une équipe de 5 développeurs construisant des solutions SaaS d'entreprise.",
-      "de": "Leitung eines Teams von 5 Entwicklern, die Enterprise-SaaS-Lösungen entwickeln."
-    }
-  },
-  {
-    "year": "2021 - 2023",
-    "role": {
-      "en": "Full-Stack Developer",
+      "en": "Full Stack Developer",
       "fr": "Développeur Full-Stack",
       "de": "Full-Stack-Entwickler"
     },
-    "company": "StartUp Inc.",
+    "company": "YOOL EDUCATION",
     "description": {
-      "en": "Built the MVP and scaled the product to the first 50k users.",
-      "fr": "Construit le MVP et fait évoluer le produit jusqu'aux premiers 50k utilisateurs.",
-      "de": "Erstellung des MVP und Skalierung des Produkts auf die ersten 50k Nutzer."
+      "en": "Leading development of Laravel and Vue.js applications, REST APIs, database administration, server management, CI/CD, code refactoring, performance optimization, testing, and EdTech innovations. Also responsible for project coordination, mentorship, and technical leadership as Head of Tech.",
+      "fr": "Direction du développement d'applications Laravel et Vue.js, APIs REST, administration de bases de données, gestion de serveurs, CI/CD, refactorisation du code, optimisation des performances, tests et innovations EdTech. Responsable également de la coordination de projets, du mentorat et du leadership technique en tant que Head of Tech.",
+      "de": "Leitung der Entwicklung von Laravel- und Vue.js-Anwendungen, REST-APIs, Datenbankverwaltung, Servermanagement, CI/CD, Code-Refactoring, Leistungsoptimierung, Testing und EdTech-Innovationen. Verantwortlich für Projektkoordination, Mentoring und technische Leitung als Head of Tech."
     }
   },
   {
-    "year": "2019 - 2021",
+    "year": "Mar 2024 - Oct 2024",
     "role": {
-      "en": "Frontend Developer",
-      "fr": "Développeur Frontend",
-      "de": "Frontend-Entwickler"
+      "en": "Frontend & Backend Web Developer Intern",
+      "fr": "Stagiaire Développeur Web Frontend & Backend",
+      "de": "Praktikant Frontend & Backend Webentwickler"
     },
-    "company": "Creative Digital",
+    "company": "YOOL EDUCATION",
     "description": {
-      "en": "Crafted award-winning marketing sites and interactive experiences.",
-      "fr": "Créé des sites marketing primés et des expériences interactives.",
-      "de": "Erstellung preisgekrönter Marketing-Websites und interaktiver Erlebnisse."
+      "en": "Developed the Yool Forum as a full-stack web developer intern, creating a user-friendly and interactive platform for educational discussions using Laravel and jQuery.",
+      "fr": "Développement du Yool Forum en tant que stagiaire développeur web full-stack, création d'une plateforme interactive et conviviale pour les discussions éducatives avec Laravel et jQuery.",
+      "de": "Entwicklung des Yool Forums als Full-Stack-Webentwickler-Praktikant, Erstellung einer benutzerfreundlichen und interaktiven Plattform für Bildungsdiskussionen mit Laravel und jQuery."
+    }
+  },
+  {
+    "year": "Oct 2024 - Present",
+    "role": {
+      "en": "Full-Stack Web Developer (Freelance)",
+      "fr": "Développeur Web Full-Stack (Freelance)",
+      "de": "Full-Stack Webentwickler (Freelance)"
+    },
+    "company": "COLOPIG",
+    "description": {
+      "en": "Worked on COLOPIG, a specialized pigeon breeding management system. Built and maintained Laravel backend, developed responsive interfaces with Laravel/Vue.js, integrated real-time notifications, implemented breeding cycle tracking, ring management, performance statistics, and optimized database operations.",
+      "fr": "Travail sur COLOPIG, un système de gestion de l'élevage de pigeons. Création et maintenance du backend Laravel, développement d'interfaces réactives avec Laravel/Vue.js, intégration des notifications en temps réel, suivi des cycles d'élevage, gestion des bagues, statistiques de performance et optimisation des opérations de la base de données.",
+      "de": "Arbeit an COLOPIG, einem spezialisierten Taubenzucht-Management-System. Aufbau und Pflege des Laravel-Backends, Entwicklung responsiver Interfaces mit Laravel/Vue.js, Integration von Echtzeit-Benachrichtigungen, Implementierung der Zuchtzyklus-Verfolgung, Ringverwaltung, Leistungsstatistiken und Optimierung der Datenbankoperationen."
     }
   }
 ]

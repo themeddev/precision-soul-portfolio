@@ -1,44 +1,44 @@
 {
-  "name": "Alex Dev",
-  "title": "Full-Stack Developer",
+  "name": "AHMED AIT ALI OUBRAHIM",
+  "title": "Laravel & Full-Stack Developer",
   "bio": {
-    "en": "With over 6 years of deep technical experience, I bridge the gap between complex backend architecture and intuitive frontend design. My philosophy is simple: clean code, scalable infrastructure, and a relentless focus on user experience. Whether it's a 0-to-1 startup MVP or an enterprise migration, I bring a product-first mindset.",
-    "fr": "Avec plus de 6 ans d'expérience technique approfondie, je fais le lien entre l'architecture backend complexe et la conception frontend intuitive. Ma philosophie est simple : code propre, infrastructure évolutive et un focus implacable sur l'expérience utilisateur. Qu'il s'agisse d'un MVP startup 0-to-1 ou d'une migration d'entreprise, j'apporte une mentalité axée sur le produit.",
-    "de": "Mit über 6 Jahren tiefgreifender technischer Erfahrung überbrücke ich die Lücke zwischen komplexer Backend-Architektur und intuitivem Frontend-Design. Meine Philosophie ist einfach: sauberer Code, skalierbare Infrastruktur und ein unerbittlicher Fokus auf Benutzerfreundlichkeit. Ob es sich um ein Startup-MVP von 0 bis 1 oder eine Unternehmensmigration handelt, ich bringe eine produktorientierte Denkweise mit."
+    "en": "With extensive experience in Laravel, Vue.js, and full-stack web development, I specialize in building scalable applications, real-time features, and complex data-driven systems. I focus on clean, maintainable code, efficient database design, and delivering robust solutions across startups and enterprise projects.",
+    "fr": "Avec une vaste expérience en Laravel, Vue.js et développement Full-Stack, je me spécialise dans la création d'applications évolutives, de fonctionnalités en temps réel et de systèmes complexes basés sur les données. Je privilégie un code propre et maintenable, une conception efficace des bases de données et des solutions robustes pour startups et projets d'entreprise.",
+    "de": "Mit umfangreicher Erfahrung in Laravel, Vue.js und Full-Stack-Webentwicklung spezialisiere ich mich auf skalierbare Anwendungen, Echtzeitfunktionen und komplexe datengetriebene Systeme. Ich lege Wert auf sauberen, wartbaren Code, effizientes Datenbankdesign und robuste Lösungen für Startups und Unternehmensprojekte."
   },
   "intro": {
-    "en": "A Full-Stack Developer specializing in high-performance web applications, scalable APIs, and fluid user interfaces using Next.js, Node, and AWS.",
-    "fr": "Un développeur Full-Stack spécialisé dans les applications web haute performance, les API évolutives et les interfaces utilisateur fluides utilisant Next.js, Node et AWS.",
-    "de": "Ein Full-Stack-Entwickler, der sich auf hochperformante Webanwendungen, skalierbare APIs und flüssige Benutzeroberflächen mit Next.js, Node und AWS spezialisiert."
+    "en": "A Full-Stack Developer focusing on Laravel, Vue.js, real-time data systems, API architecture, and clean scalable web applications.",
+    "fr": "Un développeur Full-Stack spécialisé dans Laravel, Vue.js, les systèmes de données en temps réel, l'architecture API et les applications web propres et évolutives.",
+    "de": "Ein Full-Stack-Entwickler mit Schwerpunkt auf Laravel, Vue.js, Echtzeit-Datensystemen, API-Architektur und sauberen, skalierbaren Webanwendungen."
   },
   "hero": {
     "en": {
-      "line1": "Building digital",
-      "line2": "products with",
-      "line3": "precision & soul",
-      "availability": "Available for freelance"
+      "line1": "Building robust",
+      "line2": "web & data-driven",
+      "line3": "applications with precision",
+      "availability": "Open for freelance or collaborations"
     },
     "fr": {
-      "line1": "Création de produits",
-      "line2": "numériques avec",
-      "line3": "précision & âme",
-      "availability": "Disponible en freelance"
+      "line1": "Création d'applications",
+      "line2": "web & basées sur les données",
+      "line3": "avec précision",
+      "availability": "Disponible pour freelance ou collaborations"
     },
     "de": {
-      "line1": "Digitale Produkte",
-      "line2": "bauen mit",
-      "line3": "Präzision & Seele",
-      "availability": "Verfügbar für Freelance"
+      "line1": "Robuste Web- &",
+      "line2": "datengetriebene Anwendungen",
+      "line3": "mit Präzision entwickeln",
+      "availability": "Verfügbar für Freelance oder Kooperationen"
     }
   },
   "stats": {
-    "experience": "6+",
+    "experience": "+1.5",
     "experienceLabel": {
       "en": "Years Experience",
       "fr": "Années d'expérience",
       "de": "Jahre Erfahrung"
     },
-    "projects": "40+",
+    "projects": "10+",
     "projectsLabel": {
       "en": "Projects Delivered",
       "fr": "Projets livrés",
@@ -46,10 +46,10 @@
     }
   },
   "location": {
-    "en": "San Francisco, CA (Remote Open)",
-    "fr": "San Francisco, CA (Télétravail ouvert)",
-    "de": "San Francisco, CA (Remote möglich)"
+    "en": "Remote (Based in Morocco)",
+    "fr": "Télétravail (Basé au Maroc)",
+    "de": "Remote (Mit Sitz in Marokko)"
   },
-  "email": "hello@alexdev.com",
-  "cvUrl": "/cv/alex-dev-cv.pdf"
+  "email": "[EMAIL_ADDRESS]",
+  "cvUrl": "/cv/yool-edu-it-cv.pdf"
 }
