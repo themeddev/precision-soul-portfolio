@@ -1,15 +1,16 @@
 [
-  "React",
-  "Next.js",
-  "TypeScript",
-  "Node.js",
-  "PostgreSQL",
-  "GraphQL",
-  "AWS",
-  "Docker",
-  "Kubernetes",
-  "Redis",
+  "Laravel",
+  "Vue.js",
+  "PHP",
+  "MySQL",
+  "MongoDB",
+  "Linux",
   "Tailwind",
-  "GSAP",
-  "Prisma"
+  "Bootstrap",
+  "Github",
+  "Gitlab",
+  "Git",
+  "Jira",
+  "CI/CD",
+  "Agile"
 ]

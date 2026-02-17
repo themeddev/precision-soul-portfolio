@@ -2,58 +2,96 @@
   {
     "id": 1,
     "title": {
-      "en": "Full-Stack Web Apps",
+      "en": "Full-Stack Web Applications",
       "fr": "Applications Web Full-Stack",
-      "de": "Full-Stack Web-Apps"
+      "de": "Full-Stack-Webanwendungen"
     },
     "description": {
-      "en": "End-to-end development of scalable, performant web applications using modern architectures.",
-      "fr": "Développement de bout en bout d'applications web évolutives et performantes utilisant des architectures modernes.",
-      "de": "End-to-End-Entwicklung skalierbarer, leistungsstarker Webanwendungen mit modernen Architekturen."
+      "en": "Building end-to-end web applications with Laravel, Vue.js, and modern architectures, focusing on scalability, maintainability, and seamless UX.",
+      "fr": "Création d'applications web de bout en bout avec Laravel, Vue.js et des architectures modernes, en mettant l'accent sur l'évolutivité, la maintenabilité et une UX fluide.",
+      "de": "Entwicklung von End-to-End-Webanwendungen mit Laravel, Vue.js und modernen Architekturen mit Fokus auf Skalierbarkeit, Wartbarkeit und nahtlose Benutzererfahrung."
     },
     "icon": "Layers",
     "steps": {
-      "en": ["Architecture", "Development", "Testing", "Deployment"],
-      "fr": ["Architecture", "Développement", "Tests", "Déploiement"],
-      "de": ["Architektur", "Entwicklung", "Tests", "Bereitstellung"]
+      "en": ["Architecture & Design", "Frontend & Backend Development", "Testing & QA", "Deployment & Maintenance"],
+      "fr": ["Architecture & Conception", "Développement Frontend & Backend", "Tests & Assurance Qualité", "Déploiement & Maintenance"],
+      "de": ["Architektur & Design", "Frontend- & Backend-Entwicklung", "Tests & QA", "Bereitstellung & Wartung"]
     }
   },
   {
     "id": 2,
     "title": {
-      "en": "API & Systems Design",
+      "en": "APIs & Systems Design",
       "fr": "Conception d'API et de systèmes",
       "de": "API- und Systemdesign"
     },
     "description": {
-      "en": "Robust backend systems designed for high availability, security, and low latency.",
-      "fr": "Systèmes backend robustes conçus pour une haute disponibilité, la sécurité et une faible latence.",
-      "de": "Robuste Backend-Systeme, die für hohe Verfügbarkeit, Sicherheit und niedrige Latenz entwickelt wurden."
+      "en": "Designing secure, scalable, and high-performance backend systems and APIs, with attention to database optimization, caching, and integration workflows.",
+      "fr": "Conception de systèmes backend sécurisés, évolutifs et performants et d'API, avec une attention particulière à l'optimisation des bases de données, au caching et aux flux d'intégration.",
+      "de": "Entwurf sicherer, skalierbarer und leistungsstarker Backend-Systeme und APIs mit Fokus auf Datenbankoptimierung, Caching und Integrations-Workflows."
     },
     "icon": "Database",
     "steps": {
-      "en": ["Schema Design", "API Dev", "Optimization", "Documentation"],
-      "fr": ["Conception de schéma", "Développement API", "Optimisation", "Documentation"],
-      "de": ["Schema-Design", "API-Entwicklung", "Optimierung", "Dokumentation"]
+      "en": ["Schema & Architecture", "API Development", "Optimization & Caching", "Documentation & Integration"],
+      "fr": ["Schéma & Architecture", "Développement API", "Optimisation & Mise en cache", "Documentation & Intégration"],
+      "de": ["Schema & Architektur", "API-Entwicklung", "Optimierung & Caching", "Dokumentation & Integration"]
     }
   },
   {
     "id": 3,
     "title": {
-      "en": "Performance Tuning",
-      "fr": "Optimisation des performances",
-      "de": "Leistungsoptimierung"
+      "en": "Performance & Optimization",
+      "fr": "Performance & Optimisation",
+      "de": "Performance & Optimierung"
     },
     "description": {
-      "en": "Optimizing existing applications for Core Web Vitals, load times, and server efficiency.",
-      "fr": "Optimisation des applications existantes pour les Core Web Vitals, les temps de chargement et l'efficacité du serveur.",
-      "de": "Optimierung bestehender Anwendungen für Core Web Vitals, Ladezeiten und Servereffizienz."
+      "en": "Improving application speed, server efficiency, and Core Web Vitals through audits, refactoring, monitoring, and advanced caching strategies.",
+      "fr": "Amélioration de la vitesse des applications, de l'efficacité serveur et des Core Web Vitals grâce aux audits, à la refactorisation, à la surveillance et aux stratégies avancées de caching.",
+      "de": "Verbesserung der Anwendungsleistung, Servereffizienz und Core Web Vitals durch Audits, Refactoring, Monitoring und fortschrittliche Caching-Strategien."
     },
     "icon": "Zap",
     "steps": {
-      "en": ["Audit", "Refactoring", "Caching", "Monitoring"],
-      "fr": ["Audit", "Refactorisation", "Mise en cache", "Surveillance"],
-      "de": ["Audit", "Refactoring", "Caching", "Überwachung"]
+      "en": ["Audit & Analysis", "Refactoring", "Caching Strategies", "Monitoring & Reporting"],
+      "fr": ["Audit & Analyse", "Refactorisation", "Stratégies de caching", "Surveillance & Reporting"],
+      "de": ["Audit & Analyse", "Refactoring", "Caching-Strategien", "Monitoring & Reporting"]
+    }
+  },
+  {
+    "id": 4,
+    "title": {
+      "en": "Analytics & Data Insights",
+      "fr": "Analytique & Insights",
+      "de": "Analyse & Daten-Insights"
+    },
+    "description": {
+      "en": "Developing data-driven features for student attendance, presence tracking, and reporting with Laravel and Vue.js dashboards.",
+      "fr": "Développement de fonctionnalités basées sur les données pour le suivi de la présence des étudiants et la génération de rapports avec Laravel et les tableaux de bord Vue.js.",
+      "de": "Entwicklung datenbasierter Funktionen für die Anwesenheit von Schülern, Präsenzverfolgung und Berichterstattung mit Laravel und Vue.js-Dashboards."
+    },
+    "icon": "BarChart",
+    "steps": {
+      "en": ["Data Modeling", "Collection & Tracking", "Visualization & Dashboards", "Reporting & Insights"],
+      "fr": ["Modélisation des données", "Collecte & Suivi", "Visualisation & Tableaux de bord", "Rapports & Insights"],
+      "de": ["Datenmodellierung", "Erfassung & Tracking", "Visualisierung & Dashboards", "Berichterstattung & Insights"]
+    }
+  },
+  {
+    "id": 5,
+    "title": {
+      "en": "SAML2 & Identity Integration",
+      "fr": "SAML2 & Intégration d'identité",
+      "de": "SAML2 & Identitätsintegration"
+    },
+    "description": {
+      "en": "Implementing secure SAML2 identity provider solutions and integrating with third-party service providers for single sign-on workflows.",
+      "fr": "Mise en place de solutions SAML2 sécurisées en tant que fournisseur d'identité et intégration avec des services tiers pour le SSO.",
+      "de": "Implementierung sicherer SAML2-Identitätsanbieterlösungen und Integration mit Drittanbieter-Service-Providern für Single-Sign-On-Workflows."
+    },
+    "icon": "Key",
+    "steps": {
+      "en": ["Identity Setup", "Metadata Configuration", "User Provisioning", "SP Integration"],
+      "fr": ["Configuration de l'identité", "Configuration des métadonnées", "Provisioning des utilisateurs", "Intégration SP"],
+      "de": ["Identitäts-Setup", "Metadaten-Konfiguration", "Benutzerbereitstellung", "SP-Integration"]
     }
   }
 ]

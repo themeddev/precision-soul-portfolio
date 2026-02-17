@@ -1,94 +1,48 @@
 [
   {
     "id": 1,
-    "title": "FinTech Dashboard",
+    "title": "YOOL EDUCATION",
     "description": {
-      "en": "A real-time financial analytics platform processing 50k+ transactions per second.",
-      "fr": "Une plateforme d'analyse financière en temps réel traitant plus de 50 000 transactions par seconde.",
-      "de": "Eine Echtzeit-Finanzanalyseplattform, die über 50.000 Transaktionen pro Sekunde verarbeitet."
+      "en": "A comprehensive educational platform managing student attendance, multi-class parcours, and analytics dashboards with real-time reporting.",
+      "fr": "Une plateforme éducative complète gérant la présence des étudiants, les parcours multi-classes et des tableaux de bord analytiques avec rapports en temps réel.",
+      "de": "Eine umfassende Bildungsplattform zur Verwaltung der Schüleranwesenheit, Multi-Klassen-Parcours und Analytics-Dashboards mit Echtzeit-Berichterstattung."
     },
     "role": {
-      "en": "Lead Full-Stack",
-      "fr": "Lead Full-Stack",
-      "de": "Lead Full-Stack"
+      "en": "Lead Full-Stack Developer",
+      "fr": "Développeur Full-Stack Lead",
+      "de": "Lead Full-Stack-Entwickler"
     },
-    "tags": ["Next.js", "PostgreSQL", "Redis", "AWS"],
+    "tags": ["Laravel", "Vue.js", "MySQL", "Notifications"],
     "metrics": {
-      "en": "+45% Data Retrieval Speed",
-      "fr": "+45% de vitesse de récupération des données",
-      "de": "+45% Datenabrufgeschwindigkeit"
+      "en": "+95% Accurate Attendance Tracking",
+      "fr": "+95% de précision dans le suivi de la présence",
+      "de": "+95% genaue Anwesenheitsverfolgung"
     },
-    "image": "https://picsum.photos/id/48/1200/800",
-    "link": "#",
+    "image": "/public/assets/images/covers/yool_cover.jpg",
+    "link": "https://www.yool.education",
     "github": "#"
   },
   {
     "id": 2,
-    "title": "E-Commerce Headless",
+    "title": "COLOPIG",
     "description": {
-      "en": "Composable commerce solution integrated with Shopify Plus and Contentful.",
-      "fr": "Solution de commerce composable intégrée à Shopify Plus et Contentful.",
-      "de": "Composable Commerce-Lösung integriert mit Shopify Plus und Contentful."
-    },
-    "role": {
-      "en": "Frontend Architect",
-      "fr": "Architecte Frontend",
-      "de": "Frontend-Architekt"
-    },
-    "tags": ["React", "GraphQL", "Tailwind", "Vercel"],
-    "metrics": {
-      "en": "+30% Conversion Rate",
-      "fr": "+30% de taux de conversion",
-      "de": "+30% Konversionsrate"
-    },
-    "image": "https://picsum.photos/id/201/1200/800",
-    "link": "#",
-    "github": "#"
-  },
-  {
-    "id": 3,
-    "title": "AI Content Engine",
-    "description": {
-      "en": "SaaS platform leveraging LLMs to generate marketing copy at scale.",
-      "fr": "Plateforme SaaS exploitant les LLM pour générer du contenu marketing à grande échelle.",
-      "de": "SaaS-Plattform, die LLMs nutzt, um Marketingtexte im großen Maßstab zu generieren."
+      "en": "A digital platform for collaborative projects and content management, focused on seamless user experience and real-time updates.",
+      "fr": "Une plateforme numérique pour les projets collaboratifs et la gestion de contenu, axée sur une expérience utilisateur fluide et des mises à jour en temps réel.",
+      "de": "Eine digitale Plattform für kollaborative Projekte und Content-Management, mit Fokus auf nahtlose Benutzererfahrung und Echtzeit-Updates."
     },
     "role": {
       "en": "Full-Stack Developer",
       "fr": "Développeur Full-Stack",
       "de": "Full-Stack-Entwickler"
     },
-    "tags": ["Python", "FastAPI", "React", "OpenAI"],
+    "tags": ["Laravel", "Vue.js", "MySQL", "Realtime"],
     "metrics": {
-      "en": "10k+ Monthly Users",
-      "fr": "Plus de 10k utilisateurs mensuels",
-      "de": "10k+ monatliche Nutzer"
+      "en": "Real-time Collaboration Enabled",
+      "fr": "Collaboration en temps réel activée",
+      "de": "Echtzeit-Zusammenarbeit aktiviert"
     },
-    "image": "https://picsum.photos/id/3/1200/800",
-    "link": "#",
-    "github": "#"
-  },
-  {
-    "id": 4,
-    "title": "HealthTech App",
-    "description": {
-      "en": "HIPAA-compliant telemedicine application for scheduling and video calls.",
-      "fr": "Application de télémédecine conforme HIPAA pour la planification et les appels vidéo.",
-      "de": "HIPAA-konforme Telemedizin-Anwendung für Terminplanung und Videoanrufe."
-    },
-    "role": {
-      "en": "Backend Lead",
-      "fr": "Lead Backend",
-      "de": "Backend-Lead"
-    },
-    "tags": ["Node.js", "WebRTC", "Docker", "K8s"],
-    "metrics": {
-      "en": "99.99% Uptime",
-      "fr": "99,99% de disponibilité",
-      "de": "99,99% Uptime"
-    },
-    "image": "https://picsum.photos/id/119/1200/800",
-    "link": "#",
+    "image": "/public/assets/images/covers/colopig_cover.png",
+    "link": "https://www.colopig.com",
     "github": "#"
   }
 ]
