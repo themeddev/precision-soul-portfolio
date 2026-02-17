@@ -12,14 +12,14 @@
       "fr": "Développeur Full-Stack Lead",
       "de": "Lead Full-Stack-Entwickler"
     },
-    "tags": ["Laravel", "Vue.js", "MySQL", "Inertia.js", "Notifications"],
+    "tags": ["Laravel", "Vue.js", "MySQL", "Notifications"],
     "metrics": {
       "en": "+95% Accurate Attendance Tracking",
       "fr": "+95% de précision dans le suivi de la présence",
       "de": "+95% genaue Anwesenheitsverfolgung"
     },
-    "image": "https://picsum.photos/id/1011/1200/800",
-    "link": "#",
+    "image": "/public/assets/images/covers/yool_cover.jpg",
+    "link": "https://www.yool.education",
     "github": "#"
   },
   {
@@ -35,14 +35,14 @@
       "fr": "Développeur Full-Stack",
       "de": "Full-Stack-Entwickler"
     },
-    "tags": ["Laravel", "Vue.js", "MySQL", "Websockets", "Realtime"],
+    "tags": ["Laravel", "Vue.js", "MySQL", "Realtime"],
     "metrics": {
       "en": "Real-time Collaboration Enabled",
       "fr": "Collaboration en temps réel activée",
       "de": "Echtzeit-Zusammenarbeit aktiviert"
     },
-    "image": "https://picsum.photos/id/1025/1200/800",
-    "link": "#",
+    "image": "/public/assets/images/covers/colopig_cover.png",
+    "link": "https://www.colopig.com",
     "github": "#"
   }
 ]

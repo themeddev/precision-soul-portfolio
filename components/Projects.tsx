@@ -104,15 +104,15 @@ export const Projects: React.FC = () => {
                                 <Button variant="primary" className="!py-3 !px-6 text-sm" onClick={() => window.open(project.link, '_blank')}>
                                     {t.projects.viewLive} <ExternalLink className="w-4 h-4 ml-2" />
                                 </Button>
-                                <Button variant="secondary" className="!py-3 !px-6 text-sm" onClick={() => window.open(project.github, '_blank')}>
+                                {/* <Button variant="secondary" className="!py-3 !px-6 text-sm" onClick={() => window.open(project.github, '_blank')}>
                                     <Github className="w-4 h-4" />
-                                </Button>
+                                </Button> */}
                             </div>
                         </div>
                     </div>
                 </div>
             ))}
-            
+        
             {/* View All Card */}
              <div className="w-[85vw] md:w-[30vw] h-[60vh] shrink-0 flex items-center justify-center">
                  <div className="text-center">
