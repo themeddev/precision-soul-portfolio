@@ -206,20 +206,19 @@ export const Hero: React.FC = () => {
   return (
     <section ref={containerRef} className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden px-6 perspective-1000">
       
-      {/* Animated Background Blobs with 3D effect */}
       <div 
         ref={blob1Ref}
-        className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-br from-accent/30 via-purple-600/20 to-blue-600/20 rounded-full blur-[120px] -z-10 hero-bg-blob translate-x-1/3 -translate-y-1/4"
+        className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-br from-red-700/50 via-red-600/30 to-black/60 rounded-full blur-[120px] -z-10 hero-bg-blob translate-x-1/3 -translate-y-1/4"
         style={{ transform: 'translateZ(0)' }}
       />
       <div 
         ref={blob2Ref}
-        className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-blue-600/20 via-cyan-500/15 to-transparent rounded-full blur-[100px] -z-10"
+        className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-black/70 via-red-900/40 to-transparent rounded-full blur-[100px] -z-10"
         style={{ transform: 'translateZ(0)' }}
       />
       <div 
         ref={blob3Ref}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-r from-accent/15 to-purple-600/15 rounded-full blur-[80px] -z-10"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-r from-red-500/30 to-red-800/20 rounded-full blur-[80px] -z-10"
         style={{ transform: 'translateZ(0)' }}
       />
 

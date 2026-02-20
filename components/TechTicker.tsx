@@ -21,7 +21,7 @@ export const TechTicker: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full py-10 border-y border-white/5 bg-black/50 overflow-hidden relative z-20">
+    <div className="w-full py-10 border-y border-white/5 bg-background/80 overflow-hidden relative z-20">
       <div className="relative w-full flex overflow-hidden">
          <div ref={wrapperRef} className="flex whitespace-nowrap gap-16 px-8">
             {[...techStack, ...techStack, ...techStack].map((tech, i) => (

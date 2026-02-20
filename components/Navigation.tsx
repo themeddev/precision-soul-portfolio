@@ -98,7 +98,7 @@ export const Navigation: React.FC = () => {
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-4 bg-black/20 backdrop-blur-md px-8 py-3 rounded-full border border-white/5 nav-item">
+        <div className="hidden md:flex items-center gap-4 bg-background/20 backdrop-blur-md px-8 py-3 rounded-full border border-white/5 nav-item">
           {navLinks.map((link, index) => (
             <a
               key={link.href}
