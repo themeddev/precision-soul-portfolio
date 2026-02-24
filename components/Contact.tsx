@@ -34,7 +34,7 @@ export const Contact: React.FC = () => {
           body: `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`,
         });
 
-        window.location.href = `mailto:${profile.email}?${params.toString()}`;
+        window.location.href = `mailto:${profile.email}?${params.toString().replace(/\+/g, '%20')}`;
       }
 
       setStatus('success');
