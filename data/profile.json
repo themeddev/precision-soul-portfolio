@@ -32,13 +32,13 @@
     }
   },
   "stats": {
-    "experience": "+1.5",
+    "experience": "+2",
     "experienceLabel": {
       "en": "Years Experience",
       "fr": "Années d'expérience",
       "de": "Jahre Erfahrung"
     },
-    "projects": "10+",
+    "projects": "5+",
     "projectsLabel": {
       "en": "Projects Delivered",
       "fr": "Projets livrés",

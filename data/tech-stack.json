@@ -4,13 +4,11 @@
   "PHP",
   "MySQL",
   "MongoDB",
-  "Linux",
-  "Tailwind",
-  "Bootstrap",
-  "Github",
-  "Gitlab",
   "Git",
+  "GitHub",
+  "GitLab",
+  "Linux",
+  "Tailwind CSS",
   "Jira",
-  "CI/CD",
-  "Agile"
+  "CI/CD"
 ]
