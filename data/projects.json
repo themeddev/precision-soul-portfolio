@@ -18,7 +18,7 @@
       "fr": "Projet réalisé en équipe professionnelle",
       "de": "Projekt im professionellen Team"
     },
-    "image": "/public/assets/images/covers/yool_cover.jpg",
+    "image": "/assets/images/covers/yool_cover.jpg",
     "link": "https://www.yool.education",
     "github": null
   },
@@ -41,7 +41,7 @@
       "fr": "Conçu dans un cadre professionnel",
       "de": "Im professionellen Kontext entwickelt"
     },
-    "image": "/public/assets/images/covers/colopig_cover.png",
+    "image": "/assets/images/covers/colopig_cover.png",
     "link": "https://www.colopig.com",
     "github": null
   }

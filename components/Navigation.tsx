@@ -117,104 +117,116 @@ export const Navigation: React.FC = () => {
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-4 nav-item rounded-full border border-white/20 bg-background/60 supports-[backdrop-filter]:bg-background/40 backdrop-blur-md px-8 py-3 shadow-sm">
-          {navLinks.map((link, index) => (
+        <div className="nav-item relative hidden rounded-full border border-white/20 px-8 py-3 shadow-[0_20px_60px_rgba(0,0,0,0.12)] md:flex md:items-center md:gap-4">
+          <div className="pointer-events-none absolute inset-0 rounded-full bg-white/35 backdrop-blur-2xl backdrop-saturate-150 dark:bg-black/45" />
+          <div className="pointer-events-none absolute inset-0 rounded-full border border-white/20 dark:border-white/10" />
+          <div className="relative z-10 flex items-center gap-4">
+            {navLinks.map((link, index) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="nav-item text-sm font-medium text-muted hover:text-accent transition-all duration-300 relative group"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-accent transition-all duration-300 group-hover:w-full" />
+              </a>
+            ))}
+
+            {/* Language Switcher */}
+            <div className="relative ml-4" ref={langMenuRef}>
+              <button
+                onClick={() => {
+                  setLangMenuOpen(!langMenuOpen);
+                  setThemeMenuOpen(false);
+                }}
+                className="w-8 h-8 flex items-center justify-center rounded-full bg-white/25 hover:bg-accent/20 transition-all duration-300 hover:scale-110 dark:bg-white/10"
+                aria-label="Change language"
+              >
+                <Globe className="w-4 h-4" />
+              </button>
+
+              {langMenuOpen && (
+                <div className="absolute right-0 top-full z-20 mt-2 min-w-[100px] overflow-hidden rounded-lg border border-white/20 shadow-xl animate-in fade-in slide-in-from-top-2">
+                  <div className="pointer-events-none absolute inset-0 bg-white/45 backdrop-blur-2xl backdrop-saturate-150 dark:bg-black/60" />
+                  <div className="pointer-events-none absolute inset-0 border border-white/20 dark:border-white/10" />
+                  <div className="relative z-10">
+                    {(['en', 'fr', 'de'] as const).map((lang) => (
+                      <button
+                        key={lang}
+                        onClick={() => {
+                          setLanguage(lang);
+                          setLangMenuOpen(false);
+                        }}
+                        className={`w-full px-4 py-2 text-sm text-left hover:bg-white/30 dark:hover:bg-white/10 transition-colors ${
+                          language === lang ? 'text-accent font-semibold' : 'text-muted'
+                        }`}
+                      >
+                        {lang.toUpperCase()}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Theme Toggle with Dropdown */}
+            <div className="relative ml-2" ref={themeMenuRef}>
+              <button
+                onClick={() => {
+                  setThemeMenuOpen(!themeMenuOpen);
+                  setLangMenuOpen(false);
+                }}
+                className="w-8 h-8 flex items-center justify-center rounded-full bg-white/25 hover:bg-accent/20 transition-all duration-300 hover:scale-110 dark:bg-white/10"
+                aria-label="Toggle theme"
+              >
+                {getThemeIcon()}
+              </button>
+
+              {themeMenuOpen && (
+                <div className="absolute right-0 top-full z-20 mt-2 min-w-[120px] overflow-hidden rounded-lg border border-white/20 shadow-xl animate-in fade-in slide-in-from-top-2">
+                  <div className="pointer-events-none absolute inset-0 bg-white/45 backdrop-blur-2xl backdrop-saturate-150 dark:bg-black/60" />
+                  <div className="pointer-events-none absolute inset-0 border border-white/20 dark:border-white/10" />
+                  <div className="relative z-10">
+                    <button
+                      onClick={() => handleThemeSelect('light')}
+                      className={`w-full px-4 py-2 text-sm text-left hover:bg-white/30 dark:hover:bg-white/10 transition-colors flex items-center gap-2 ${
+                        theme === 'light' ? 'text-accent font-semibold' : 'text-muted'
+                      }`}
+                    >
+                      <Sun className="w-4 h-4" />
+                      Light
+                    </button>
+                    <button
+                      onClick={() => handleThemeSelect('dark')}
+                      className={`w-full px-4 py-2 text-sm text-left hover:bg-white/30 dark:hover:bg-white/10 transition-colors flex items-center gap-2 ${
+                        theme === 'dark' ? 'text-accent font-semibold' : 'text-muted'
+                      }`}
+                    >
+                      <Moon className="w-4 h-4" />
+                      Dark
+                    </button>
+                    <button
+                      onClick={() => handleThemeSelect('system')}
+                      className={`w-full px-4 py-2 text-sm text-left hover:bg-white/30 dark:hover:bg-white/10 transition-colors flex items-center gap-2 ${
+                        theme === 'system' ? 'text-accent font-semibold' : 'text-muted'
+                      }`}
+                    >
+                      <Monitor className="w-4 h-4" />
+                      Auto
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+
             <a
-              key={link.href}
-              href={link.href}
-              className="nav-item text-sm font-medium text-muted hover:text-accent transition-all duration-300 relative group"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              href="#contact"
+              className="ml-4 nav-item rounded-full bg-white px-4 py-2 text-sm font-bold text-black hover:bg-accent hover:text-white transition-all duration-300 hover:scale-105 dark:bg-white dark:text-black"
             >
-              {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-accent transition-all duration-300 group-hover:w-full" />
+              {t.nav.letsTalk}
             </a>
-          ))}
-
-          {/* Language Switcher */}
-          <div className="relative ml-4" ref={langMenuRef}>
-            <button
-              onClick={() => {
-                setLangMenuOpen(!langMenuOpen);
-                setThemeMenuOpen(false);
-              }}
-              className="w-8 h-8 flex items-center justify-center rounded-full bg-surfaceHighlight/60 hover:bg-accent/20 transition-all duration-300 hover:scale-110"
-              aria-label="Change language"
-            >
-              <Globe className="w-4 h-4" />
-            </button>
-
-            {langMenuOpen && (
-              <div className="absolute right-0 top-full mt-2 min-w-[100px] overflow-hidden rounded-lg border border-white/20 bg-surface/90 supports-[backdrop-filter]:bg-surface/70 backdrop-blur-md shadow-xl animate-in fade-in slide-in-from-top-2">
-                {(['en', 'fr', 'de'] as const).map((lang) => (
-                  <button
-                    key={lang}
-                    onClick={() => {
-                      setLanguage(lang);
-                      setLangMenuOpen(false);
-                    }}
-                    className={`w-full px-4 py-2 text-sm text-left hover:bg-surfaceHighlight transition-colors ${
-                      language === lang ? 'text-accent font-semibold' : 'text-muted'
-                    }`}
-                  >
-                    {lang.toUpperCase()}
-                  </button>
-                ))}
-              </div>
-            )}
           </div>
-
-          {/* Theme Toggle with Dropdown */}
-          <div className="relative ml-2" ref={themeMenuRef}>
-            <button
-              onClick={() => {
-                setThemeMenuOpen(!themeMenuOpen);
-                setLangMenuOpen(false);
-              }}
-              className="w-8 h-8 flex items-center justify-center rounded-full bg-surfaceHighlight/60 hover:bg-accent/20 transition-all duration-300 hover:scale-110"
-              aria-label="Toggle theme"
-            >
-              {getThemeIcon()}
-            </button>
-
-            {themeMenuOpen && (
-              <div className="absolute right-0 top-full mt-2 min-w-[120px] overflow-hidden rounded-lg border border-white/20 bg-surface/90 supports-[backdrop-filter]:bg-surface/70 backdrop-blur-md shadow-xl animate-in fade-in slide-in-from-top-2">
-                <button
-                  onClick={() => handleThemeSelect('light')}
-                  className={`w-full px-4 py-2 text-sm text-left hover:bg-surfaceHighlight transition-colors flex items-center gap-2 ${
-                    theme === 'light' ? 'text-accent font-semibold' : 'text-muted'
-                  }`}
-                >
-                  <Sun className="w-4 h-4" />
-                  Light
-                </button>
-                <button
-                  onClick={() => handleThemeSelect('dark')}
-                  className={`w-full px-4 py-2 text-sm text-left hover:bg-surfaceHighlight transition-colors flex items-center gap-2 ${
-                    theme === 'dark' ? 'text-accent font-semibold' : 'text-muted'
-                  }`}
-                >
-                  <Moon className="w-4 h-4" />
-                  Dark
-                </button>
-                <button
-                  onClick={() => handleThemeSelect('system')}
-                  className={`w-full px-4 py-2 text-sm text-left hover:bg-surfaceHighlight transition-colors flex items-center gap-2 ${
-                    theme === 'system' ? 'text-accent font-semibold' : 'text-muted'
-                  }`}
-                >
-                  <Monitor className="w-4 h-4" />
-                  Auto
-                </button>
-              </div>
-            )}
-          </div>
-
-          <a
-            href="#contact"
-            className="ml-4 nav-item rounded-full bg-white px-4 py-2 text-sm font-bold text-black hover:bg-accent hover:text-white transition-all duration-300 hover:scale-105 dark:bg-white dark:text-black"
-          >
-            {t.nav.letsTalk}
-          </a>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -228,79 +240,83 @@ export const Navigation: React.FC = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-background/95 backdrop-blur-xl">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="text-4xl font-display font-bold text-foreground hover:text-accent transition-all duration-300 dark:text-white"
-              >
-                {link.name}
-              </a>
-            ))}
+          <div className="fixed inset-0 z-40 overflow-hidden">
+            <div className="pointer-events-none absolute inset-0 bg-white/35 backdrop-blur-3xl backdrop-saturate-150 dark:bg-black/65" />
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.22),transparent_55%)] dark:bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_55%)]" />
+            <div className="relative z-10 flex h-full flex-col items-center justify-center gap-8 px-6">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-4xl font-display font-bold text-foreground hover:text-accent transition-all duration-300 dark:text-white"
+                >
+                  {link.name}
+                </a>
+              ))}
 
-            <div className="mt-8 flex gap-4">
-              {(['en', 'fr', 'de'] as const).map((lang) => (
+              <div className="mt-8 flex gap-4">
+                {(['en', 'fr', 'de'] as const).map((lang) => (
+                  <button
+                    key={lang}
+                    onClick={() => {
+                      setLanguage(lang);
+                      setIsOpen(false);
+                    }}
+                    className={`px-4 py-2 rounded-full text-sm transition-all ${
+                      language === lang
+                        ? 'bg-accent text-white'
+                        : 'bg-foreground/10 text-foreground/70 dark:bg-white/10 dark:text-white/70'
+                    }`}
+                  >
+                    {lang.toUpperCase()}
+                  </button>
+                ))}
+              </div>
+
+              <div className="mt-4 flex flex-col gap-2">
                 <button
-                  key={lang}
                   onClick={() => {
-                    setLanguage(lang);
+                    handleThemeSelect('light');
                     setIsOpen(false);
                   }}
-                  className={`px-4 py-2 rounded-full text-sm transition-all ${
-                    language === lang
+                  className={`px-4 py-2 rounded-full text-sm flex items-center gap-2 ${
+                    theme === 'light'
                       ? 'bg-accent text-white'
                       : 'bg-foreground/10 text-foreground/70 dark:bg-white/10 dark:text-white/70'
                   }`}
                 >
-                  {lang.toUpperCase()}
+                  <Sun className="w-4 h-4" /> Light
                 </button>
-              ))}
-            </div>
 
-            <div className="mt-4 flex flex-col gap-2">
-              <button
-                onClick={() => {
-                  handleThemeSelect('light');
-                  setIsOpen(false);
-                }}
-                className={`px-4 py-2 rounded-full text-sm flex items-center gap-2 ${
-                  theme === 'light'
-                    ? 'bg-accent text-white'
-                    : 'bg-foreground/10 text-foreground/70 dark:bg-white/10 dark:text-white/70'
-                }`}
-              >
-                <Sun className="w-4 h-4" /> Light
-              </button>
+                <button
+                  onClick={() => {
+                    handleThemeSelect('dark');
+                    setIsOpen(false);
+                  }}
+                  className={`px-4 py-2 rounded-full text-sm flex items-center gap-2 ${
+                    theme === 'dark'
+                      ? 'bg-accent text-white'
+                      : 'bg-foreground/10 text-foreground/70 dark:bg-white/10 dark:text-white/70'
+                  }`}
+                >
+                  <Moon className="w-4 h-4" /> Dark
+                </button>
 
-              <button
-                onClick={() => {
-                  handleThemeSelect('dark');
-                  setIsOpen(false);
-                }}
-                className={`px-4 py-2 rounded-full text-sm flex items-center gap-2 ${
-                  theme === 'dark'
-                    ? 'bg-accent text-white'
-                    : 'bg-foreground/10 text-foreground/70 dark:bg-white/10 dark:text-white/70'
-                }`}
-              >
-                <Moon className="w-4 h-4" /> Dark
-              </button>
-
-              <button
-                onClick={() => {
-                  handleThemeSelect('system');
-                  setIsOpen(false);
-                }}
-                className={`px-4 py-2 rounded-full text-sm flex items-center gap-2 ${
-                  theme === 'system'
-                    ? 'bg-accent text-white'
-                    : 'bg-foreground/10 text-foreground/70 dark:bg-white/10 dark:text-white/70'
-                }`}
-              >
-                <Monitor className="w-4 h-4" /> Auto
-              </button>
+                <button
+                  onClick={() => {
+                    handleThemeSelect('system');
+                    setIsOpen(false);
+                  }}
+                  className={`px-4 py-2 rounded-full text-sm flex items-center gap-2 ${
+                    theme === 'system'
+                      ? 'bg-accent text-white'
+                      : 'bg-foreground/10 text-foreground/70 dark:bg-white/10 dark:text-white/70'
+                  }`}
+                >
+                  <Monitor className="w-4 h-4" /> Auto
+                </button>
+              </div>
             </div>
           </div>
         )}

@@ -140,9 +140,9 @@ export const Hero: React.FC = () => {
     }
 
     if (!reducedMotion && particlesRef.current) {
-      const particles = particlesRef.current.children;
-      Array.from(particles).forEach((particle, i) => {
-        (particle as HTMLElement).style.willChange = 'transform';
+      const particles = Array.from(particlesRef.current.children) as HTMLElement[];
+      particles.forEach((particle, i) => {
+        particle.style.willChange = 'transform';
         gsap.to(particle, {
           y: `+=${Math.random() * 100 + 50}`,
           x: `+=${Math.random() * 50 - 25}`,
