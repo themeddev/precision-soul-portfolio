@@ -98,12 +98,12 @@ export const Navigation: React.FC = () => {
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-4 bg-black/20 backdrop-blur-md px-8 py-3 rounded-full border border-white/5 nav-item">
+        <div className="hidden md:flex items-center gap-4 bg-background/20 backdrop-blur-md px-8 py-3 rounded-full border border-white/5 nav-item">
           {navLinks.map((link, index) => (
             <a
               key={link.href}
               href={link.href}
-              className="nav-item text-sm font-medium text-white/70 hover:text-accent transition-all duration-300 relative group"
+              className="nav-item text-sm font-medium text-muted hover:text-accent transition-all duration-300 relative group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {link.name}
@@ -118,13 +118,13 @@ export const Navigation: React.FC = () => {
                 setLangMenuOpen(!langMenuOpen);
                 setThemeMenuOpen(false);
               }}
-              className="w-8 h-8 flex items-center justify-center rounded-full bg-white/5 hover:bg-accent/20 transition-all duration-300 hover:scale-110"
+              className="w-8 h-8 flex items-center justify-center rounded-full bg-surfaceHighlight/60 hover:bg-accent/20 transition-all duration-300 hover:scale-110"
               aria-label="Change language"
             >
               <Globe className="w-4 h-4" />
             </button>
             {langMenuOpen && (
-              <div className="absolute right-0 top-full mt-2 bg-surface border border-white/10 rounded-lg overflow-hidden min-w-[100px] shadow-xl animate-in fade-in slide-in-from-top-2">
+              <div className="absolute right-0 top-full mt-2 bg-surface border border-muted/20 rounded-lg overflow-hidden min-w-[100px] shadow-xl animate-in fade-in slide-in-from-top-2">
                 {(['en', 'fr', 'de'] as const).map((lang) => (
                   <button
                     key={lang}
@@ -133,7 +133,7 @@ export const Navigation: React.FC = () => {
                       setLangMenuOpen(false);
                     }}
                     className={`w-full px-4 py-2 text-sm text-left hover:bg-surfaceHighlight transition-colors ${
-                      language === lang ? 'text-accent font-semibold' : 'text-white/70'
+                      language === lang ? 'text-accent font-semibold' : 'text-muted'
                     }`}
                   >
                     {lang.toUpperCase()}
@@ -150,17 +150,17 @@ export const Navigation: React.FC = () => {
                 setThemeMenuOpen(!themeMenuOpen);
                 setLangMenuOpen(false);
               }}
-              className="w-8 h-8 flex items-center justify-center rounded-full bg-white/5 hover:bg-accent/20 transition-all duration-300 hover:scale-110"
+              className="w-8 h-8 flex items-center justify-center rounded-full bg-surfaceHighlight/60 hover:bg-accent/20 transition-all duration-300 hover:scale-110"
               aria-label="Toggle theme"
             >
               {getThemeIcon()}
             </button>
             {themeMenuOpen && (
-              <div className="absolute right-0 top-full mt-2 bg-surface border border-white/10 rounded-lg overflow-hidden min-w-[120px] shadow-xl animate-in fade-in slide-in-from-top-2">
+              <div className="absolute right-0 top-full mt-2 bg-surface border border-muted/20 rounded-lg overflow-hidden min-w-[120px] shadow-xl animate-in fade-in slide-in-from-top-2">
                 <button
                   onClick={() => handleThemeSelect('light')}
                   className={`w-full px-4 py-2 text-sm text-left hover:bg-surfaceHighlight transition-colors flex items-center gap-2 ${
-                    theme === 'light' ? 'text-accent font-semibold' : 'text-white/70'
+                    theme === 'light' ? 'text-accent font-semibold' : 'text-muted'
                   }`}
                 >
                   <Sun className="w-4 h-4" />
@@ -169,7 +169,7 @@ export const Navigation: React.FC = () => {
                 <button
                   onClick={() => handleThemeSelect('dark')}
                   className={`w-full px-4 py-2 text-sm text-left hover:bg-surfaceHighlight transition-colors flex items-center gap-2 ${
-                    theme === 'dark' ? 'text-accent font-semibold' : 'text-white/70'
+                    theme === 'dark' ? 'text-accent font-semibold' : 'text-muted'
                   }`}
                 >
                   <Moon className="w-4 h-4" />
@@ -178,7 +178,7 @@ export const Navigation: React.FC = () => {
                 <button
                   onClick={() => handleThemeSelect('system')}
                   className={`w-full px-4 py-2 text-sm text-left hover:bg-surfaceHighlight transition-colors flex items-center gap-2 ${
-                    theme === 'system' ? 'text-accent font-semibold' : 'text-white/70'
+                    theme === 'system' ? 'text-accent font-semibold' : 'text-muted'
                   }`}
                 >
                   <Monitor className="w-4 h-4" />
