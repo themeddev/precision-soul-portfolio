@@ -2,96 +2,96 @@
   {
     "id": 1,
     "title": {
-      "en": "Full-Stack Web Applications",
-      "fr": "Applications Web Full-Stack",
-      "de": "Full-Stack-Webanwendungen"
+      "en": "Web Application Development",
+      "fr": "Développement d’Applications Web",
+      "de": "Webanwendungsentwicklung"
     },
     "description": {
-      "en": "Building end-to-end web applications with Laravel, Vue.js, and modern architectures, focusing on scalability, maintainability, and seamless UX.",
-      "fr": "Création d'applications web de bout en bout avec Laravel, Vue.js et des architectures modernes, en mettant l'accent sur l'évolutivité, la maintenabilité et une UX fluide.",
-      "de": "Entwicklung von End-to-End-Webanwendungen mit Laravel, Vue.js und modernen Architekturen mit Fokus auf Skalierbarkeit, Wartbarkeit und nahtlose Benutzererfahrung."
+      "en": "Designing and developing modern web applications with a focus on usability, maintainability, and long-term product stability.",
+      "fr": "Conception et développement d’applications web modernes, avec un accent sur l’utilisabilité, la maintenabilité et la stabilité produit à long terme.",
+      "de": "Konzeption und Entwicklung moderner Webanwendungen mit Fokus auf Benutzerfreundlichkeit, Wartbarkeit und langfristige Produktstabilität."
     },
     "icon": "Layers",
     "steps": {
-      "en": ["Architecture & Design", "Frontend & Backend Development", "Testing & QA", "Deployment & Maintenance"],
-      "fr": ["Architecture & Conception", "Développement Frontend & Backend", "Tests & Assurance Qualité", "Déploiement & Maintenance"],
-      "de": ["Architektur & Design", "Frontend- & Backend-Entwicklung", "Tests & QA", "Bereitstellung & Wartung"]
+      "en": ["Planning & Structure", "Frontend & Backend Development", "Testing & Refinement", "Launch & Support"],
+      "fr": ["Planification & Structure", "Développement Frontend & Backend", "Tests & Amélioration", "Mise en ligne & Suivi"],
+      "de": ["Planung & Struktur", "Frontend- & Backend-Entwicklung", "Tests & Optimierung", "Launch & Betreuung"]
     }
   },
   {
     "id": 2,
     "title": {
-      "en": "APIs & Systems Design",
-      "fr": "Conception d'API et de systèmes",
-      "de": "API- und Systemdesign"
+      "en": "Backend & API Development",
+      "fr": "Développement Backend & API",
+      "de": "Backend- & API-Entwicklung"
     },
     "description": {
-      "en": "Designing secure, scalable, and high-performance backend systems and APIs, with attention to database optimization, caching, and integration workflows.",
-      "fr": "Conception de systèmes backend sécurisés, évolutifs et performants et d'API, avec une attention particulière à l'optimisation des bases de données, au caching et aux flux d'intégration.",
-      "de": "Entwurf sicherer, skalierbarer und leistungsstarker Backend-Systeme und APIs mit Fokus auf Datenbankoptimierung, Caching und Integrations-Workflows."
+      "en": "Building reliable backend services and application APIs that support secure data flow, smooth integrations, and scalable digital products.",
+      "fr": "Création de services backend fiables et d’API applicatives assurant des flux de données sécurisés, des intégrations fluides et des produits numériques évolutifs.",
+      "de": "Entwicklung zuverlässiger Backend-Services und Anwendungs-APIs, die sichere Datenflüsse, reibungslose Integrationen und skalierbare digitale Produkte unterstützen."
     },
     "icon": "Database",
     "steps": {
-      "en": ["Schema & Architecture", "API Development", "Optimization & Caching", "Documentation & Integration"],
-      "fr": ["Schéma & Architecture", "Développement API", "Optimisation & Mise en cache", "Documentation & Intégration"],
-      "de": ["Schema & Architektur", "API-Entwicklung", "Optimierung & Caching", "Dokumentation & Integration"]
+      "en": ["System Design", "API Implementation", "Data Management", "Documentation & Integration"],
+      "fr": ["Conception Système", "Implémentation API", "Gestion des Données", "Documentation & Intégration"],
+      "de": ["Systemdesign", "API-Implementierung", "Datenverwaltung", "Dokumentation & Integration"]
     }
   },
   {
     "id": 3,
     "title": {
-      "en": "Performance & Optimization",
-      "fr": "Performance & Optimisation",
-      "de": "Performance & Optimierung"
+      "en": "Platform Optimization",
+      "fr": "Optimisation de Plateformes",
+      "de": "Plattformoptimierung"
     },
     "description": {
-      "en": "Improving application speed, server efficiency, and Core Web Vitals through audits, refactoring, monitoring, and advanced caching strategies.",
-      "fr": "Amélioration de la vitesse des applications, de l'efficacité serveur et des Core Web Vitals grâce aux audits, à la refactorisation, à la surveillance et aux stratégies avancées de caching.",
-      "de": "Verbesserung der Anwendungsleistung, Servereffizienz und Core Web Vitals durch Audits, Refactoring, Monitoring und fortschrittliche Caching-Strategien."
+      "en": "Improving application quality through performance tuning, codebase refinement, and technical enhancements that strengthen reliability and user experience.",
+      "fr": "Amélioration de la qualité des applications grâce à l’optimisation des performances, à l’amélioration du code et à des évolutions techniques renforçant la fiabilité et l’expérience utilisateur.",
+      "de": "Verbesserung der Anwendungsqualität durch Performance-Optimierung, Weiterentwicklung der Codebasis und technische Verbesserungen zur Stärkung von Zuverlässigkeit und Benutzererfahrung."
     },
     "icon": "Zap",
     "steps": {
-      "en": ["Audit & Analysis", "Refactoring", "Caching Strategies", "Monitoring & Reporting"],
-      "fr": ["Audit & Analyse", "Refactorisation", "Stratégies de caching", "Surveillance & Reporting"],
-      "de": ["Audit & Analyse", "Refactoring", "Caching-Strategien", "Monitoring & Reporting"]
+      "en": ["Review & Analysis", "Code Improvement", "Performance Tuning", "Quality Follow-Up"],
+      "fr": ["Revue & Analyse", "Amélioration du Code", "Optimisation des Performances", "Suivi Qualité"],
+      "de": ["Prüfung & Analyse", "Code-Optimierung", "Leistungsverbesserung", "Qualitätssicherung"]
     }
   },
   {
     "id": 4,
     "title": {
-      "en": "Analytics & Data Insights",
-      "fr": "Analytique & Insights",
-      "de": "Analyse & Daten-Insights"
+      "en": "Business Platform Features",
+      "fr": "Fonctionnalités de Plateformes Métiers",
+      "de": "Funktionen für Geschäftsplattformen"
     },
     "description": {
-      "en": "Developing data-driven features for student attendance, presence tracking, and reporting with Laravel and Vue.js dashboards.",
-      "fr": "Développement de fonctionnalités basées sur les données pour le suivi de la présence des étudiants et la génération de rapports avec Laravel et les tableaux de bord Vue.js.",
-      "de": "Entwicklung datenbasierter Funktionen für die Anwesenheit von Schülern, Präsenzverfolgung und Berichterstattung mit Laravel und Vue.js-Dashboards."
+      "en": "Developing tailored digital features that support operational workflows, data handling, and day-to-day platform usability across business environments.",
+      "fr": "Développement de fonctionnalités numériques adaptées pour soutenir les workflows opérationnels, la gestion des données et l’usage quotidien des plateformes dans des environnements métiers.",
+      "de": "Entwicklung maßgeschneiderter digitaler Funktionen zur Unterstützung operativer Abläufe, Datenverarbeitung und der täglichen Nutzbarkeit von Plattformen in geschäftlichen Umgebungen."
     },
     "icon": "BarChart",
     "steps": {
-      "en": ["Data Modeling", "Collection & Tracking", "Visualization & Dashboards", "Reporting & Insights"],
-      "fr": ["Modélisation des données", "Collecte & Suivi", "Visualisation & Tableaux de bord", "Rapports & Insights"],
-      "de": ["Datenmodellierung", "Erfassung & Tracking", "Visualisierung & Dashboards", "Berichterstattung & Insights"]
+      "en": ["Requirements Review", "Feature Development", "Workflow Support", "Continuous Improvement"],
+      "fr": ["Analyse des Besoins", "Développement de Fonctionnalités", "Support des Workflows", "Amélioration Continue"],
+      "de": ["Anforderungsanalyse", "Funktionsentwicklung", "Workflow-Unterstützung", "Kontinuierliche Verbesserung"]
     }
   },
   {
     "id": 5,
     "title": {
-      "en": "SAML2 & Identity Integration",
-      "fr": "SAML2 & Intégration d'identité",
-      "de": "SAML2 & Identitätsintegration"
+      "en": "Technical Support & Maintenance",
+      "fr": "Support Technique & Maintenance",
+      "de": "Technischer Support & Wartung"
     },
     "description": {
-      "en": "Implementing secure SAML2 identity provider solutions and integrating with third-party service providers for single sign-on workflows.",
-      "fr": "Mise en place de solutions SAML2 sécurisées en tant que fournisseur d'identité et intégration avec des services tiers pour le SSO.",
-      "de": "Implementierung sicherer SAML2-Identitätsanbieterlösungen und Integration mit Drittanbieter-Service-Providern für Single-Sign-On-Workflows."
+      "en": "Supporting the ongoing evolution of web platforms through maintenance, issue resolution, technical updates, and structured improvements over time.",
+      "fr": "Accompagnement de l’évolution continue des plateformes web grâce à la maintenance, à la résolution d’incidents, aux mises à jour techniques et à des améliorations structurées dans le temps.",
+      "de": "Unterstützung der kontinuierlichen Weiterentwicklung von Webplattformen durch Wartung, Problemlösung, technische Aktualisierungen und strukturierte Verbesserungen im Laufe der Zeit."
     },
     "icon": "Key",
     "steps": {
-      "en": ["Identity Setup", "Metadata Configuration", "User Provisioning", "SP Integration"],
-      "fr": ["Configuration de l'identité", "Configuration des métadonnées", "Provisioning des utilisateurs", "Intégration SP"],
-      "de": ["Identitäts-Setup", "Metadaten-Konfiguration", "Benutzerbereitstellung", "SP-Integration"]
+      "en": ["Technical Assessment", "Issue Resolution", "System Updates", "Ongoing Maintenance"],
+      "fr": ["Évaluation Technique", "Résolution d’Incidents", "Mises à Jour Système", "Maintenance Continue"],
+      "de": ["Technische Bewertung", "Problemlösung", "Systemaktualisierungen", "Laufende Wartung"]
     }
   }
 ]

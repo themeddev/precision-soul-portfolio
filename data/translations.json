@@ -13,11 +13,11 @@
       "scroll": "Scroll"
     },
     "projects": {
-      "selectedWorks": "Selected Works",
-      "featuredProjects": "Featured Projects",
+      "selectedWorks": "Portfolio",
+      "featuredProjects": "Selected Professional Work",
       "scrollToExplore": "Scroll to explore →",
       "viewLive": "View Live",
-      "wantToSeeMore": "Want to see more?",
+      "wantToSeeMore": "Interested in more?",
       "viewGitHubProfile": "View GitHub Profile"
     },
     "about": {
@@ -65,11 +65,11 @@
       "scroll": "Défiler"
     },
     "projects": {
-      "selectedWorks": "Travaux sélectionnés",
-      "featuredProjects": "Projets en vedette",
+      "selectedWorks": "Portfolio",
+      "featuredProjects": "Réalisations professionnelles sélectionnées",
       "scrollToExplore": "Défiler pour explorer →",
-      "viewLive": "Voir en direct",
-      "wantToSeeMore": "Vous voulez en voir plus ?",
+      "viewLive": "Voir le site",
+      "wantToSeeMore": "Envie d’en voir plus ?",
       "viewGitHubProfile": "Voir le profil GitHub"
     },
     "about": {
@@ -117,12 +117,12 @@
       "scroll": "Scrollen"
     },
     "projects": {
-      "selectedWorks": "Ausgewählte Arbeiten",
-      "featuredProjects": "Ausgewählte Projekte",
-      "scrollToExplore": "Scrollen zum Erkunden →",
-      "viewLive": "Live ansehen",
-      "wantToSeeMore": "Möchten Sie mehr sehen?",
-      "viewGitHubProfile": "GitHub-Profil ansehen"
+      "selectedWorks": "Portfolio",
+      "featuredProjects": "Réalisations professionnelles sélectionnées",
+      "scrollToExplore": "Défiler pour explorer →",
+      "viewLive": "Voir le site",
+      "wantToSeeMore": "Envie d’en voir plus ?",
+      "viewGitHubProfile": "Voir le profil GitHub"
     },
     "about": {
       "aboutMe": "Über mich",

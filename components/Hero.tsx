@@ -25,64 +25,63 @@ export const Hero: React.FC = () => {
   const t = translations[language];
   const heroText = profile.hero[language];
   const reducedMotion = useMemo(() => prefersReducedMotion(), []);
-  
+
   useEffect(() => {
-    // Throttled mouse move tracking for 3D parallax (60fps max)
     const handleMouseMove = throttle((e: MouseEvent) => {
       const x = (e.clientX / window.innerWidth - 0.5) * 2;
       const y = (e.clientY / window.innerHeight - 0.5) * 2;
       mousePositionRef.current = { x, y };
       setMousePosition({ x, y });
-    }, 16); // ~60fps
+    }, 16);
 
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
 
-    // Master timeline for hero animations (reduced motion support)
     const tl = gsap.timeline({ defaults: { ease: reducedMotion ? 'none' : 'power3.out' } });
 
     if (!reducedMotion) {
-      // 3D Text Reveal with perspective (only if motion is allowed)
-      tl.fromTo('.hero-text-line', 
-        { 
-          y: 120, 
-          opacity: 0, 
+      tl.fromTo(
+        '.hero-text-line',
+        {
+          y: 120,
+          opacity: 0,
           rotateX: -45,
           transformOrigin: 'center bottom',
         },
-        { 
-          y: 0, 
-          opacity: 1, 
+        {
+          y: 0,
+          opacity: 1,
           rotateX: 0,
-          stagger: 0.2, 
-          duration: 1.2, 
+          stagger: 0.2,
+          duration: 1.2,
         }
       )
-      .fromTo('.hero-availability',
-        { opacity: 0, scale: 0.8, y: -20 },
-        { opacity: 1, scale: 1, y: 0, duration: 0.6 },
-        '-=0.8'
-      )
-      .fromTo('.hero-sub',
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.8 },
-        '-=0.6'
-      )
-      .fromTo('.hero-btn',
-        { scale: 0, opacity: 0 },
-        { scale: 1, opacity: 1, stagger: 0.1, duration: 0.6 },
-        '-=0.4'
-      );
+        .fromTo(
+          '.hero-availability',
+          { opacity: 0, scale: 0.8, y: -20 },
+          { opacity: 1, scale: 1, y: 0, duration: 0.6 },
+          '-=0.8'
+        )
+        .fromTo(
+          '.hero-sub',
+          { opacity: 0, y: 30 },
+          { opacity: 1, y: 0, duration: 0.8 },
+          '-=0.6'
+        )
+        .fromTo(
+          '.hero-btn',
+          { scale: 0, opacity: 0 },
+          { scale: 1, opacity: 1, stagger: 0.1, duration: 0.6 },
+          '-=0.4'
+        );
     } else {
-      // Simple fade-in for reduced motion
-      tl.fromTo('.hero-text-line, .hero-availability, .hero-sub, .hero-btn',
+      tl.fromTo(
+        '.hero-text-line, .hero-availability, .hero-sub, .hero-btn',
         { opacity: 0 },
         { opacity: 1, duration: 0.5, stagger: 0.1 }
       );
     }
 
-    // Animated background blobs (only if motion is allowed, optimized)
     if (!reducedMotion && blob1Ref.current && blob2Ref.current && blob3Ref.current) {
-      // Use CSS animations instead of GSAP for better performance
       blob1Ref.current.style.willChange = 'transform';
       blob2Ref.current.style.willChange = 'transform';
       blob3Ref.current.style.willChange = 'transform';
@@ -115,7 +114,6 @@ export const Hero: React.FC = () => {
       });
     }
 
-    // Parallax scroll effect (optimized, only if motion allowed)
     if (!reducedMotion && containerRef.current) {
       const scrollTrigger = {
         trigger: containerRef.current,
@@ -141,7 +139,6 @@ export const Hero: React.FC = () => {
       }
     }
 
-    // Floating particles animation (reduced count, optimized)
     if (!reducedMotion && particlesRef.current) {
       const particles = particlesRef.current.children;
       Array.from(particles).forEach((particle, i) => {
@@ -160,17 +157,16 @@ export const Hero: React.FC = () => {
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, [reducedMotion]);
 
-  // 3D mouse parallax effect (throttled, only if motion allowed)
   useEffect(() => {
     if (reducedMotion) return;
 
     const updateParallax = throttle(() => {
       const { x, y } = mousePositionRef.current;
-      
+
       if (titleRef.current) {
         gsap.to(titleRef.current, {
           rotationY: x * 3,
@@ -204,25 +200,26 @@ export const Hero: React.FC = () => {
   }, [mousePosition, reducedMotion]);
 
   return (
-    <section ref={containerRef} className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden px-6 perspective-1000">
-      
-      <div 
+    <section
+      ref={containerRef}
+      className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden px-6 perspective-1000"
+    >
+      <div
         ref={blob1Ref}
-        className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-br from-red-700/50 via-red-600/30 to-black/60 rounded-full blur-[120px] -z-10 hero-bg-blob translate-x-1/3 -translate-y-1/4"
+        className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full blur-[120px] -z-10 hero-bg-blob translate-x-1/3 -translate-y-1/4 bg-gradient-to-br from-red-700/35 via-red-600/20 to-transparent dark:from-red-700/50 dark:via-red-600/30 dark:to-black/60"
         style={{ transform: 'translateZ(0)' }}
       />
-      <div 
+      <div
         ref={blob2Ref}
-        className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-black/70 via-red-900/40 to-transparent rounded-full blur-[100px] -z-10"
+        className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full blur-[100px] -z-10 bg-gradient-to-tr from-red-950/10 via-red-700/10 to-transparent dark:from-black/70 dark:via-red-900/40 dark:to-transparent"
         style={{ transform: 'translateZ(0)' }}
       />
-      <div 
+      <div
         ref={blob3Ref}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-r from-red-500/30 to-red-800/20 rounded-full blur-[80px] -z-10"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full blur-[80px] -z-10 bg-gradient-to-r from-red-500/15 to-red-800/10 dark:from-red-500/30 dark:to-red-800/20"
         style={{ transform: 'translateZ(0)' }}
       />
 
-      {/* Floating Particles (reduced count for performance) */}
       {!reducedMotion && (
         <div ref={particlesRef} className="absolute inset-0 -z-10 pointer-events-none">
           {[...Array(PARTICLE_COUNT)].map((_, i) => (
@@ -240,11 +237,10 @@ export const Hero: React.FC = () => {
       )}
 
       {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] -z-10" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]" />
 
       <div className="max-w-7xl w-full mx-auto relative z-10 preserve-3d">
         <div className="flex flex-col gap-8 md:gap-12">
-          
           {/* Availability Badge */}
           <div className="overflow-hidden">
             <div className="hero-availability flex items-center gap-4 text-accent/90 font-mono text-sm tracking-widest uppercase mb-4">
@@ -252,11 +248,11 @@ export const Hero: React.FC = () => {
               {heroText.availability}
             </div>
           </div>
-          
+
           {/* 3D Title */}
-          <h1 
+          <h1
             ref={titleRef}
-            className="font-display font-bold text-5xl md:text-7xl lg:text-9xl tracking-tight leading-[1.1] md:leading-[1.1] text-white preserve-3d"
+            className="font-display font-bold text-5xl md:text-7xl lg:text-9xl tracking-tight leading-[1.1] md:leading-[1.1] text-foreground dark:text-white preserve-3d"
             style={{ transformStyle: 'preserve-3d' }}
           >
             <div className="overflow-hidden">
@@ -272,10 +268,10 @@ export const Hero: React.FC = () => {
               </span>
             </div>
             <div className="overflow-hidden">
-              <span className="hero-text-line block text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-accent relative">
+              <span className="hero-text-line block text-transparent bg-clip-text bg-gradient-to-r from-accent via-foreground to-accent dark:via-white relative">
                 {heroText.line3}
                 <span className="text-accent">.</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-accent/30 via-white/30 to-accent/30 blur-2xl opacity-60"></span>
+                <span className="absolute inset-0 bg-gradient-to-r from-accent/30 via-foreground/20 to-accent/30 dark:via-white/30 blur-2xl opacity-60"></span>
               </span>
             </div>
           </h1>
@@ -289,19 +285,20 @@ export const Hero: React.FC = () => {
             </div>
             <div className="md:col-span-6 flex flex-wrap gap-4">
               <div className="hero-btn">
-                <Button 
+                <Button
                   onClick={() => smoothScrollTo('projects', 80)}
                   className="group relative overflow-hidden"
                 >
                   <span className="relative z-10 flex items-center gap-2">
-                    {t.hero.viewProjects} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    {t.hero.viewProjects}
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </span>
                   <span className="absolute inset-0 bg-gradient-to-r from-accent to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 </Button>
               </div>
               <div className="hero-btn">
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   onClick={() => smoothScrollTo('contact', 80)}
                   className="group"
                 >
@@ -310,15 +307,16 @@ export const Hero: React.FC = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
-      
+
       {/* Enhanced Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
-        <span className="text-xs uppercase tracking-widest font-mono">{t.hero.scroll}</span>
+        <span className="text-xs uppercase tracking-widest font-mono text-foreground/70 dark:text-white/70">
+          {t.hero.scroll}
+        </span>
         <div className="relative w-[1px] h-16">
-          <div className="absolute inset-0 bg-gradient-to-b from-accent via-white/50 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-accent via-foreground/40 to-transparent dark:via-white/50"></div>
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-accent rounded-full animate-bounce shadow-[0_0_10px_rgba(255,77,0,0.8)]"></div>
         </div>
       </div>

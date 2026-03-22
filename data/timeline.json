@@ -2,29 +2,29 @@
   {
     "year": "Oct 2024 - Present",
     "role": {
-      "en": "Full Stack Developer",
-      "fr": "Développeur Full-Stack",
-      "de": "Full-Stack-Entwickler"
+      "en": "Full-Stack Software Engineer",
+      "fr": "Ingénieur Logiciel Full-Stack",
+      "de": "Full-Stack-Softwareingenieur"
     },
     "company": "YOOL EDUCATION",
     "description": {
-      "en": "Leading development of Laravel and Vue.js applications, REST APIs, database administration, server management, CI/CD, code refactoring, performance optimization, testing, and EdTech innovations. Also responsible for project coordination, mentorship, and technical leadership as Head of Tech.",
-      "fr": "Direction du développement d'applications Laravel et Vue.js, APIs REST, administration de bases de données, gestion de serveurs, CI/CD, refactorisation du code, optimisation des performances, tests et innovations EdTech. Responsable également de la coordination de projets, du mentorat et du leadership technique en tant que Head of Tech.",
-      "de": "Leitung der Entwicklung von Laravel- und Vue.js-Anwendungen, REST-APIs, Datenbankverwaltung, Servermanagement, CI/CD, Code-Refactoring, Leistungsoptimierung, Testing und EdTech-Innovationen. Verantwortlich für Projektkoordination, Mentoring und technische Leitung als Head of Tech."
+      "en": "Contributing to the development and evolution of a web-based education platform within a professional team. Involved in building and maintaining full-stack features, improving application performance, and supporting scalable and reliable system workflows. Also contributing to technical coordination and knowledge sharing across the team.",
+      "fr": "Contribution au développement et à l’évolution d’une plateforme éducative web au sein d’une équipe professionnelle. Participation à la création et à la maintenance de fonctionnalités full-stack, à l’amélioration des performances applicatives et au support de workflows fiables et évolutifs. Contribution également à la coordination technique et au partage de connaissances au sein de l’équipe.",
+      "de": "Mitwirkung an der Entwicklung und Weiterentwicklung einer webbasierten Bildungsplattform in einem professionellen Team. Beteiligung am Aufbau und an der Wartung von Full-Stack-Funktionen, an der Verbesserung der Anwendungsleistung sowie an stabilen und skalierbaren Systemabläufen. Zusätzlich Beitrag zur technischen Koordination und zum Wissensaustausch im Team."
     }
   },
   {
     "year": "Mar 2024 - Oct 2024",
     "role": {
-      "en": "Frontend & Backend Web Developer Intern",
-      "fr": "Stagiaire Développeur Web Frontend & Backend",
-      "de": "Praktikant Frontend & Backend Webentwickler"
+      "en": "Full-Stack Web Developer Intern",
+      "fr": "Stagiaire Développeur Web Full-Stack",
+      "de": "Praktikant Full-Stack-Webentwickler"
     },
     "company": "YOOL EDUCATION",
     "description": {
-      "en": "Developed the Yool Forum as a full-stack web developer intern, creating a user-friendly and interactive platform for educational discussions using Laravel and jQuery.",
-      "fr": "Développement du Yool Forum en tant que stagiaire développeur web full-stack, création d'une plateforme interactive et conviviale pour les discussions éducatives avec Laravel et jQuery.",
-      "de": "Entwicklung des Yool Forums als Full-Stack-Webentwickler-Praktikant, Erstellung einer benutzerfreundlichen und interaktiven Plattform für Bildungsdiskussionen mit Laravel und jQuery."
+      "en": "Worked as a full-stack developer intern on internal platform features, including the development of an interactive discussion module. Focused on delivering clean, maintainable code and improving user experience within an existing application environment.",
+      "fr": "Stage en tant que développeur web full-stack sur des fonctionnalités internes de la plateforme, incluant le développement d’un module de discussion interactif. Travail axé sur un code propre et maintenable ainsi que sur l’amélioration de l’expérience utilisateur dans un environnement applicatif existant.",
+      "de": "Tätigkeit als Full-Stack-Webentwickler-Praktikant an internen Plattformfunktionen, einschließlich der Entwicklung eines interaktiven Diskussionsmoduls. Fokus auf sauberem, wartbarem Code sowie auf der Verbesserung der Benutzererfahrung innerhalb einer bestehenden Anwendung."
     }
   },
   {
@@ -36,9 +36,9 @@
     },
     "company": "COLOPIG",
     "description": {
-      "en": "Worked on COLOPIG, a specialized pigeon breeding management system. Built and maintained Laravel backend, developed responsive interfaces with Laravel/Vue.js, integrated real-time notifications, implemented breeding cycle tracking, ring management, performance statistics, and optimized database operations.",
-      "fr": "Travail sur COLOPIG, un système de gestion de l'élevage de pigeons. Création et maintenance du backend Laravel, développement d'interfaces réactives avec Laravel/Vue.js, intégration des notifications en temps réel, suivi des cycles d'élevage, gestion des bagues, statistiques de performance et optimisation des opérations de la base de données.",
-      "de": "Arbeit an COLOPIG, einem spezialisierten Taubenzucht-Management-System. Aufbau und Pflege des Laravel-Backends, Entwicklung responsiver Interfaces mit Laravel/Vue.js, Integration von Echtzeit-Benachrichtigungen, Implementierung der Zuchtzyklus-Verfolgung, Ringverwaltung, Leistungsstatistiken und Optimierung der Datenbankoperationen."
+      "en": "Collaborated on the development of a domain-specific management platform, contributing to both backend and frontend features. Focused on implementing user-oriented functionalities, maintaining application stability, and supporting efficient data handling within the system.",
+      "fr": "Collaboration au développement d’une plateforme de gestion spécialisée, avec une contribution sur les aspects backend et frontend. Participation à la mise en place de fonctionnalités orientées utilisateur, à la stabilité de l’application et à la gestion efficace des données.",
+      "de": "Mitarbeit an der Entwicklung einer spezialisierten Verwaltungsplattform mit Beiträgen im Backend- und Frontend-Bereich. Fokus auf benutzerorientierten Funktionen, Anwendungsstabilität und effizienter Datenverarbeitung im System."
     }
   }
 ]

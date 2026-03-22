@@ -94,7 +94,7 @@ export const Navigation: React.FC = () => {
     <nav ref={navRef} className="fixed top-0 left-0 right-0 z-50 px-6 py-6 md:px-12">
       <div className="flex items-center justify-between">
         <a href="#" className="nav-item text-xl font-display font-bold tracking-tight mix-blend-difference z-50 hover:scale-105 transition-transform">
-          {profile.name.toUpperCase().split(' ')[0]}<span className="text-accent">.</span>DEV
+          {profile.name}
         </a>
 
         {/* Desktop Nav */}

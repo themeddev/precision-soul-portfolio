@@ -1,54 +1,55 @@
 [
   {
     "category": {
-      "en": "Frontend",
-      "fr": "Frontend",
-      "de": "Frontend"
+      "en": "Frontend Technologies",
+      "fr": "Technologies Frontend",
+      "de": "Frontend-Technologien"
     },
     "skills": [
-      { "name": "Vue.js", "level": 95 },
-      { "name": "jQuery", "level": 85 },
-      { "name": "HTML / CSS", "level": 95 },
-      { "name": "Tailwind CSS", "level": 85 }
+      { "name": "Vue.js" },
+      { "name": "React.js" },
+      { "name": "Vite.js" },
+      { "name": "Next.js" }
     ]
   },
   {
     "category": {
-      "en": "Backend",
-      "fr": "Backend",
-      "de": "Backend"
+      "en": "Backend Technologies",
+      "fr": "Technologies Backend",
+      "de": "Backend-Technologien"
     },
     "skills": [
-      { "name": "Laravel", "level": 95 },
-      { "name": "PHP", "level": 90 },
-      { "name": "MySQL / SQL", "level": 90 },
-      { "name": "REST API Development", "level": 90 }
+      { "name": "Laravel" },
+      { "name": "PHP" },
+      { "name": "MySQL" },
+      { "name": "MongoDB" },
+      { "name": "REST APIs" }
     ]
   },
   {
     "category": {
-      "en": "DevOps",
-      "fr": "DevOps",
-      "de": "DevOps"
+      "en": "Infrastructure & Delivery",
+      "fr": "Infrastructure & Livraison",
+      "de": "Infrastruktur & Bereitstellung"
     },
     "skills": [
-      { "name": "Docker", "level": 85 },
-      { "name": "CI/CD Pipelines", "level": 85 },
-      { "name": "Server Management & Deployment", "level": 90 },
-      { "name": "Performance Optimization", "level": 90 }
+      { "name": "Linux" },
+      { "name": "Docker" },
+      { "name": "CI/CD" }
     ]
   },
   {
     "category": {
-      "en": "Tools",
-      "fr": "Outils",
-      "de": "Tools"
+      "en": "Development Tools",
+      "fr": "Outils de Développement",
+      "de": "Entwicklungstools"
     },
     "skills": [
-      { "name": "Git", "level": 95 },
-      { "name": "VS Code", "level": 90 },
-      { "name": "Postman", "level": 85 },
-      { "name": "Code Refactoring & Best Practices", "level": 90 }
+      { "name": "Git" },
+      { "name": "GitHub" },
+      { "name": "GitLab" },
+      { "name": "Postman" },
+      { "name": "Jira" }
     ]
   }
 ]

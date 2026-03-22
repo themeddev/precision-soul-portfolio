@@ -3,46 +3,46 @@
     "id": 1,
     "title": "YOOL EDUCATION",
     "description": {
-      "en": "A comprehensive educational platform managing student attendance, multi-class parcours, and analytics dashboards with real-time reporting.",
-      "fr": "Une plateforme éducative complète gérant la présence des étudiants, les parcours multi-classes et des tableaux de bord analytiques avec rapports en temps réel.",
-      "de": "Eine umfassende Bildungsplattform zur Verwaltung der Schüleranwesenheit, Multi-Klassen-Parcours und Analytics-Dashboards mit Echtzeit-Berichterstattung."
-    },
-    "role": {
-      "en": "Lead Full-Stack Developer",
-      "fr": "Développeur Full-Stack Lead",
-      "de": "Lead Full-Stack-Entwickler"
-    },
-    "tags": ["Laravel", "Vue.js", "MySQL", "Notifications"],
-    "metrics": {
-      "en": "+95% Accurate Attendance Tracking",
-      "fr": "+95% de précision dans le suivi de la présence",
-      "de": "+95% genaue Anwesenheitsverfolgung"
-    },
-    "image": "/public/assets/images/covers/yool_cover.jpg",
-    "link": "https://www.yool.education",
-    "github": "#"
-  },
-  {
-    "id": 2,
-    "title": "COLOPIG",
-    "description": {
-      "en": "A digital platform for collaborative projects and content management, focused on seamless user experience and real-time updates.",
-      "fr": "Une plateforme numérique pour les projets collaboratifs et la gestion de contenu, axée sur une expérience utilisateur fluide et des mises à jour en temps réel.",
-      "de": "Eine digitale Plattform für kollaborative Projekte und Content-Management, mit Fokus auf nahtlose Benutzererfahrung und Echtzeit-Updates."
+      "en": "An education platform developed as part of a professional team environment, focused on student operations, class journey management, and administrative dashboards. My contribution centered on building and maintaining reliable full-stack features that supported day-to-day platform workflows.",
+      "fr": "Une plateforme éducative développée dans un cadre professionnel au sein d’une équipe, axée sur les opérations liées aux étudiants, la gestion des parcours de classes et les tableaux de bord administratifs. Ma contribution portait sur le développement et la maintenance de fonctionnalités full-stack fiables soutenant les usages quotidiens de la plateforme.",
+      "de": "Eine Bildungsplattform, die im professionellen Teamumfeld entwickelt wurde und sich auf studentische Abläufe, die Verwaltung von Klassenpfaden sowie administrative Dashboards konzentriert. Mein Beitrag lag in der Entwicklung und Wartung zuverlässiger Full-Stack-Funktionen zur Unterstützung der täglichen Plattformprozesse."
     },
     "role": {
       "en": "Full-Stack Developer",
       "fr": "Développeur Full-Stack",
       "de": "Full-Stack-Entwickler"
     },
-    "tags": ["Laravel", "Vue.js", "MySQL", "Realtime"],
+    "tags": ["Full-Stack Development", "Admin Dashboards", "Web Platform"], 
     "metrics": {
-      "en": "Real-time Collaboration Enabled",
-      "fr": "Collaboration en temps réel activée",
-      "de": "Echtzeit-Zusammenarbeit aktiviert"
+      "en": "Professional Team Project",
+      "fr": "Projet réalisé en équipe professionnelle",
+      "de": "Projekt im professionellen Team"
+    },
+    "image": "/public/assets/images/covers/yool_cover.jpg",
+    "link": "https://www.yool.education",
+    "github": null
+  },
+  {
+    "id": 2,
+    "title": "COLOPIG",
+    "description": {
+      "en": "A collaborative digital platform delivered in a professional setting, with an emphasis on content workflows, user experience, and responsive application behavior. I contributed to the full-stack implementation of product features, interface improvements, and overall platform stability.",
+      "fr": "Une plateforme numérique collaborative réalisée dans un contexte professionnel, avec un accent sur les workflows de contenu, l’expérience utilisateur et la réactivité de l’application. J’ai contribué à l’implémentation full-stack des fonctionnalités produit, aux améliorations d’interface et à la stabilité globale de la plateforme.",
+      "de": "Eine kollaborative digitale Plattform, die in einem professionellen Kontext umgesetzt wurde, mit Schwerpunkt auf Content-Workflows, Benutzererfahrung und reaktionsschnellem Anwendungsverhalten. Ich habe zur Full-Stack-Implementierung von Produktfunktionen, Interface-Verbesserungen und zur allgemeinen Plattformstabilität beigetragen."
+    },
+    "role": {
+      "en": "Full-Stack Developer",
+      "fr": "Développeur Full-Stack",
+      "de": "Full-Stack-Entwickler"
+    },
+    "tags": ["Collaborative Platform", "Full-Stack Development" , "Business Applications"],
+    "metrics": {
+      "en": "Built in a Professional Context",
+      "fr": "Conçu dans un cadre professionnel",
+      "de": "Im professionellen Kontext entwickelt"
     },
     "image": "/public/assets/images/covers/colopig_cover.png",
     "link": "https://www.colopig.com",
-    "github": "#"
+    "github": null
   }
 ]
