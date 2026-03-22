@@ -109,6 +109,10 @@ export interface Translations {
       email: string;
       message: string;
       send: string;
+      sending: string;
+      success: string;
+      error: string;
+      missingConfig: string;
       namePlaceholder: string;
       emailPlaceholder: string;
       messagePlaceholder: string;
