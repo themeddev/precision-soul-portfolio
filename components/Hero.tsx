@@ -6,6 +6,7 @@ import { ArrowRight } from 'lucide-react';
 import { profile, translations } from '../lib/data-loader';
 import { useLanguage } from '../contexts/LanguageContext';
 import { throttle, prefersReducedMotion, smoothScrollTo } from '../lib/utils';
+import { HeroBlob } from './hero-blob/HeroBlob';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -240,71 +241,87 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]" />
 
       <div className="max-w-7xl w-full mx-auto relative z-10 preserve-3d">
-        <div className="flex flex-col gap-8 md:gap-12">
-          {/* Availability Badge */}
-          <div className="overflow-hidden">
-            <div className="hero-availability flex items-center gap-4 text-accent/90 font-mono text-sm tracking-widest uppercase mb-4">
-              <span className="w-2 h-2 bg-accent rounded-full animate-pulse shadow-[0_0_10px_rgba(255,77,0,0.8)]"></span>
-              {heroText.availability}
+        <div className="grid items-center gap-10 xl:grid-cols-[minmax(0,1.15fr)_minmax(340px,460px)]">
+          <div className="flex flex-col gap-8 md:gap-12 max-w-5xl">
+            {/* Availability Badge */}
+            <div className="overflow-hidden">
+              <div className="hero-availability flex items-center gap-4 text-accent/90 font-mono text-sm tracking-widest uppercase mb-4">
+                <span className="w-2 h-2 bg-accent rounded-full animate-pulse shadow-[0_0_10px_rgba(255,77,0,0.8)]"></span>
+                {heroText.availability}
+              </div>
+            </div>
+
+            {/* 3D Title */}
+            <h1
+              ref={titleRef}
+              className="font-display font-bold text-5xl md:text-7xl lg:text-8xl xl:text-[6.8rem] tracking-tight leading-[1.05] text-foreground dark:text-white preserve-3d"
+              style={{ transformStyle: 'preserve-3d' }}
+            >
+              <div className="overflow-hidden">
+                <span className="hero-text-line block relative">
+                  {heroText.line1}
+                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/20 to-transparent blur-xl opacity-50"></span>
+                </span>
+              </div>
+              <div className="overflow-hidden">
+                <span className="hero-text-line block relative">
+                  {heroText.line2}
+                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/20 to-transparent blur-xl opacity-50"></span>
+                </span>
+              </div>
+              <div className="overflow-hidden">
+                <span className="hero-text-line block text-transparent bg-clip-text bg-gradient-to-r from-accent via-foreground to-accent dark:via-white relative">
+                  {heroText.line3}
+                  <span className="text-accent">.</span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-accent/30 via-foreground/20 to-accent/30 dark:via-white/30 blur-2xl opacity-60"></span>
+                </span>
+              </div>
+            </h1>
+
+            <div className="xl:hidden flex justify-center">
+              <div className="relative h-[20rem] w-full max-w-[22rem]">
+                <HeroBlob className="h-full w-full opacity-90" />
+              </div>
+            </div>
+
+            {/* Content Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
+              <div className="md:col-span-6 lg:col-span-5">
+                <p className="hero-sub text-lg md:text-xl text-muted leading-relaxed">
+                  {profile.intro[language]}
+                </p>
+              </div>
+              <div className="md:col-span-6 flex flex-wrap gap-4">
+                <div className="hero-btn">
+                  <Button
+                    onClick={() => smoothScrollTo('projects', 80)}
+                    className="group relative overflow-hidden"
+                  >
+                    <span className="relative z-10 flex items-center gap-2">
+                      {t.hero.viewProjects}
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-accent to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  </Button>
+                </div>
+                <div className="hero-btn">
+                  <Button
+                    variant="outline"
+                    onClick={() => smoothScrollTo('contact', 80)}
+                    className="group"
+                  >
+                    {t.hero.bookCall}
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* 3D Title */}
-          <h1
-            ref={titleRef}
-            className="font-display font-bold text-5xl md:text-7xl lg:text-9xl tracking-tight leading-[1.1] md:leading-[1.1] text-foreground dark:text-white preserve-3d"
-            style={{ transformStyle: 'preserve-3d' }}
-          >
-            <div className="overflow-hidden">
-              <span className="hero-text-line block relative">
-                {heroText.line1}
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/20 to-transparent blur-xl opacity-50"></span>
-              </span>
-            </div>
-            <div className="overflow-hidden">
-              <span className="hero-text-line block relative">
-                {heroText.line2}
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/20 to-transparent blur-xl opacity-50"></span>
-              </span>
-            </div>
-            <div className="overflow-hidden">
-              <span className="hero-text-line block text-transparent bg-clip-text bg-gradient-to-r from-accent via-foreground to-accent dark:via-white relative">
-                {heroText.line3}
-                <span className="text-accent">.</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-accent/30 via-foreground/20 to-accent/30 dark:via-white/30 blur-2xl opacity-60"></span>
-              </span>
-            </div>
-          </h1>
-
-          {/* Content Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
-            <div className="md:col-span-6 lg:col-span-5">
-              <p className="hero-sub text-lg md:text-xl text-muted leading-relaxed">
-                {profile.intro[language]}
-              </p>
-            </div>
-            <div className="md:col-span-6 flex flex-wrap gap-4">
-              <div className="hero-btn">
-                <Button
-                  onClick={() => smoothScrollTo('projects', 80)}
-                  className="group relative overflow-hidden"
-                >
-                  <span className="relative z-10 flex items-center gap-2">
-                    {t.hero.viewProjects}
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-accent to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                </Button>
-              </div>
-              <div className="hero-btn">
-                <Button
-                  variant="outline"
-                  onClick={() => smoothScrollTo('contact', 80)}
-                  className="group"
-                >
-                  {t.hero.bookCall}
-                </Button>
-              </div>
+          <div className="relative hidden xl:flex justify-end">
+            <div className="relative h-[34rem] w-full max-w-[30rem]">
+              <div className="absolute inset-0 rounded-[2.5rem] bg-[radial-gradient(circle_at_48%_38%,rgba(255,255,255,0.1),rgba(63,87,255,0.06)_22%,rgba(0,0,0,0)_72%)] blur-2xl opacity-80" />
+              <div className="absolute inset-x-[10%] inset-y-[8%] rounded-[42%] border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.01))] backdrop-blur-[2px]" />
+              <HeroBlob className="h-full w-full" />
             </div>
           </div>
         </div>
