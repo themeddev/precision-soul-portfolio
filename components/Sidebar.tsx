@@ -8,8 +8,9 @@ export const Sidebar: React.FC = () => {
 
   const handleDownloadCV = () => {
     const link = document.createElement('a');
-    link.href = profile.cvUrl;
-    link.download = `cv-${profile.name.toLowerCase().replace(' ', '-')}.pdf`;
+    link.href = profile.cvUrl[language];
+    link.download = profile.cvUrl[language];
+
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
