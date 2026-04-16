@@ -51,5 +51,9 @@
     "de": "Remote (Mit Sitz in Marokko)"
   },
   "email": "ahmedaao.network@gmail.com",
-  "cvUrl": "/public/cv/ahmed-ait-ali-oubrahim.pdf"
+  "cvUrl": {
+    "en": "/cv/ahmed-aitalioubrahim-en.pdf",
+    "fr": "/cv/ahmed-aitalioubrahim-en.pdf",
+    "de": "/cv/ahmed-aitalioubrahim-de.pdf"
+  }
 }
